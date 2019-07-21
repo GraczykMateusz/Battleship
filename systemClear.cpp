@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include "systemClear.h"
 
 void systemClear() {
 #ifdef WINDOWS
