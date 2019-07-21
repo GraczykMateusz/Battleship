@@ -1,19 +1,24 @@
 //FILENAME: GameManager.cpp
 #include <iostream>
+#include <memory>
+#include <string>
 #include "GameManager.h"
+#include "Map.h"
+#include "Ai.h"
+#include "systemClear.h"
 
 using std::cin;
 using std::cout;
 using std::endl;
 
 GameManager::GameManager() {
-	dificultyLevel = "medium";
+	difficultyLevelGM = "medium";
 	mapSizeGM = 10;
 }
 
-short GameManager::menu() {
+char GameManager::menu() {
 	showMenu();
-	return selectMenu();	
+	return playerSelect();	
 }
 
 void GameManager::showMenu() {
@@ -24,7 +29,7 @@ void GameManager::showMenu() {
 	cout << "Select:";
 }
 
-int GameManager::selectMenu() {
+char GameManager::playerSelect() {
 	cin >> select;
 	return select;
 }
@@ -32,11 +37,40 @@ int GameManager::selectMenu() {
 bool GameManager::startGame() {
 
 }
-
-short GameManager::settings() {
-
+/*-----------SETTINGS------------*/
+void GameManager::settings(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai) {
+	do {
+		showSettingsMenu();
+		switch(playerSelect()) {
+			case '1':
+				setDifficultyLevel(ai);
+			break;
+			case '2':
+				setMapSize(map);
+			break;
+			case '3':
+				setExit();	
+			break;
+			default:
+				systemClear();
+			break;	
+		}		
+	} while(exit == false);	
+	exit = false;
 }
 
-void GameManager::setExit() {
-	exit = true;
+void GameManager::showSettingsMenu() {
+	cout << "---- CURRENT SETTINGS ----" << endl;
+	cout << "1.Difficulty level: " << difficultyLevelGM << "  (EASY, MEDIUM, HARD)" << endl;
+	cout << "2.Map size: " << mapSizeGM << "  (10-20)" << endl;	
+	cout << "3.Back" << endl;
+	cout << "Select:";
+}
+
+void GameManager::setDifficultyLevel(std::shared_ptr<Ai> ai) {
+	cout << "Change:";
+}
+
+void GameManager::setMapSize(std::shared_ptr<Map> map) {
+	
 }
