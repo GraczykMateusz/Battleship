@@ -1,21 +1,28 @@
+//FILENAME: main.cpp
 #include <iostream>
 #include <memory>
-#include "GameManager.h"
 #include "Map.h"
-#include "systemClear.cpp"
+#include "GameManager.h"
+#include "systemClear.h"
+#include "Ai.h"
 
 int main() {
-	std::shared_ptr<GameManager> gameManager(new GameManager());
-	std::unique_ptr<Map> map(new Map(gameManager->getMapSize()));
+	std::unique_ptr<GameManager> gameManager(new GameManager());
+	std::shared_ptr<Map> map(new Map(gameManager->getMapSize()));
+	std::shared_ptr<Ai> ai(new Ai(gameManager->getDifficultyLevel()));
 	do {
+		systemClear();
 		switch (gameManager->menu()) {
-			case 1:
+			case '1':
+				systemClear();
 				gameManager->startGame();
 			break;
-			case 2:
-				gameManager->settings();
+			case '2':
+				systemClear();
+				gameManager->settings(map, ai);
 			break;	
-			case 3:
+			case '3':
+				systemClear();
 				gameManager->setExit();
 			break;
 			default:
