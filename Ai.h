@@ -2,8 +2,10 @@
 
 class Ai {
 public:
-	Ai(std::string difficultyLevelGM);
+	Ai();
 	~Ai() = default;
+
+	std::string* getDifficultyLevel() { return &difficultyLevel; }
 private:
 	std::string difficultyLevel;
 };
