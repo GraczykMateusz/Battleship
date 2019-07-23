@@ -1,15 +1,24 @@
-//FILENAME: Map.h
 #include <vector>
 
 class Map {
 public:
-	Map(int mapSizeGM);
+	Map();
 	~Map() = default;
 
-	int getMapSize() { return mapSize; }
-	std::vector<std::vector<int>> getVecMap2D() { return this->vecMap2D; }
+	unsigned int* getMapSizeHeight() { return &mapSizeHeight; }
+	unsigned int* getMapSizeWidth() { return &mapSizeWidth; }
+	std::vector<std::vector<int>>* getVecMap2D() { return &vecMap2D; }
+	void setVecMap2D();
+	void showMap();
 private:
-	unsigned int mapSize;
-	std::vector<std::vector<int>> vecMap2D { mapSize, std::vector<int>(mapSize, 0) };
-	void setMapSize(int mapSizeGM) { mapSize = mapSizeGM; }	
+	enum HorizontalLetters {
+		A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, R, S, T, U // 0-19
+	};
+	//Map
+	unsigned int mapSizeHeight;
+	unsigned int mapSizeWidth;
+	std::vector<std::vector<int>> vecMap2D;
+	void setMap();	
 };
+
+
