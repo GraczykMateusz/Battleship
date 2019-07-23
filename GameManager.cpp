@@ -1,4 +1,3 @@
-//FILENAME: GameManager.cpp
 #include <iostream>
 #include <memory>
 #include <string>
@@ -11,12 +10,9 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-GameManager::GameManager() {
-	difficultyLevelGM = "medium";
-	mapSizeGM = 10;
-}
-
+/*------------MENU-------------*/
 char GameManager::menu() {
+	systemClear();
 	showMenu();
 	return playerSelect();	
 }
@@ -33,14 +29,24 @@ char GameManager::playerSelect() {
 	cin >> select;
 	return select;
 }
+/*----------MENU-END-------------*/
 
-bool GameManager::startGame() {
-
+/*------------START--------------*/
+bool GameManager::startGame(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai) {
+	systemClear();
+	//-----------------------
+	//Here AI set ships on the map
+	//------------------------
+	
+	map->showMap();
 }
+/*----------START-END------------*/
+
 /*-----------SETTINGS------------*/
 void GameManager::settings(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai) {
 	do {
-		showSettingsMenu();
+		systemClear();
+		showSettingsMenu(map, ai);
 		switch(playerSelect()) {
 			case '1':
 				setDifficultyLevel(ai);
@@ -59,18 +65,30 @@ void GameManager::settings(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai) {
 	exit = false;
 }
 
-void GameManager::showSettingsMenu() {
+void GameManager::showSettingsMenu(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai) {
 	cout << "---- CURRENT SETTINGS ----" << endl;
-	cout << "1.Difficulty level: " << difficultyLevelGM << "  (EASY, MEDIUM, HARD)" << endl;
-	cout << "2.Map size: " << mapSizeGM << "  (10-20)" << endl;	
+	cout << "1.Difficulty level: " << *ai->getDifficultyLevel() << "  (EASY, MEDIUM, HARD)" << endl;
+	cout << "2.Map height:" << *map->getMapSizeHeight() << ", width:" << *map->getMapSizeWidth() << "   (10-20)" << endl;	
 	cout << "3.Back" << endl;
 	cout << "Select:";
 }
 
 void GameManager::setDifficultyLevel(std::shared_ptr<Ai> ai) {
 	cout << "Change:";
+	auto difficultyLevel = ai->getDifficultyLevel();
+	cin >> *difficultyLevel;
 }
 
 void GameManager::setMapSize(std::shared_ptr<Map> map) {
+	auto mapSizeHeight = map->getMapSizeHeight();
+	auto mapSizeWidth = map->getMapSizeWidth();
 	
+	cout << "Change height:";
+	cin >> *mapSizeHeight;
+
+	cout << "Change width:";
+	cin >> *mapSizeWidth;
+	
+	map->setVecMap2D();
 }
+/*--------SETTINGS-END---------*/
