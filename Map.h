@@ -11,14 +11,11 @@ public:
 	void setVecMap2D();
 	void showMap();
 private:
-	enum HorizontalLetters {
-		A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, R, S, T, U // 0-19
-	};
-	//Map
 	unsigned int mapSizeHeight;
 	unsigned int mapSizeWidth;
-	std::vector<std::vector<int>> vecMap2D;
+	std::vector<std::vector<int>> vecMap2D; //[Width][Height]
 	void setMap();	
+	char setLastLetterAscii();
 };
 
 
