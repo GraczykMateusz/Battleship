@@ -5,7 +5,7 @@ public:
 	Ai();
 	~Ai() = default;
 
-	std::string* getDifficultyLevel() { return &difficultyLevel; }
+	static std::string* getDifficultyLevel();
 private:
-	std::string difficultyLevel;
+	static std::string difficultyLevel;
 };

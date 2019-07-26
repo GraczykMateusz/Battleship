@@ -1,5 +1,4 @@
 #include "Ai.h"
 
-Ai::Ai() {
-	difficultyLevel = "medium";
-}
+std::string Ai::difficultyLevel = "medium";
+std::string* Ai::getDifficultyLevel() { return &difficultyLevel; }
