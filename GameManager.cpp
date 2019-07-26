@@ -1,10 +1,13 @@
 #include <iostream>
 #include <memory>
 #include <string>
+
 #include "GameManager.h"
 #include "Map.h"
 #include "Ai.h"
 #include "systemClear.h"
+#include "BotMap.h"
+#include "PlayerMap.h"
 
 using std::cin;
 using std::cout;
@@ -32,27 +35,30 @@ char GameManager::playerSelect() {
 /*----------MENU-END-------------*/
 
 /*------------START--------------*/
-bool GameManager::startGame(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai) {
+bool GameManager::startGame() {
 	systemClear();
-	//-----------------------
-	//Here AI set ships on the map
-	//------------------------
+
+	std::unique_ptr<BotMap> botMap(new BotMap());
+	std::unique_ptr<PlayerMap> playerMap(new PlayerMap());
 	
-	map->showMap();
+	playerMap->showMap();
+	botMap->showMap();
+		
+	playerSelect();
 }
 /*----------START-END------------*/
 
 /*-----------SETTINGS------------*/
-void GameManager::settings(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai) {
+void GameManager::settings() {
 	do {
 		systemClear();
-		showSettingsMenu(map, ai);
+		showSettingsMenu();
 		switch(playerSelect()) {
 			case '1':
-				setDifficultyLevel(ai);
+				setDifficultyLevel();
 			break;
 			case '2':
-				setMapSize(map);
+				setMapSize();
 			break;
 			case '3':
 				setExit();	
@@ -65,30 +71,24 @@ void GameManager::settings(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai) {
 	exit = false;
 }
 
-void GameManager::showSettingsMenu(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai) {
+void GameManager::showSettingsMenu() {
 	cout << "---- CURRENT SETTINGS ----" << endl;
-	cout << "1.Difficulty level: " << *ai->getDifficultyLevel() << "  (EASY, MEDIUM, HARD)" << endl;
-	cout << "2.Map height:" << *map->getMapSizeHeight() << ", width:" << *map->getMapSizeWidth() << "   (10-20)" << endl;	
+	cout << "1.Difficulty level: " << *Ai::getDifficultyLevel() << "  (EASY, MEDIUM, HARD)" << endl;
+	cout << "2.Map height:" << *Map::getMapSizeHeight() << ", width:" << *Map::getMapSizeWidth() << "   (10-20)" << endl;	
 	cout << "3.Back" << endl;
 	cout << "Select:";
 }
 
-void GameManager::setDifficultyLevel(std::shared_ptr<Ai> ai) {
+void GameManager::setDifficultyLevel() {
 	cout << "Change:";
-	auto difficultyLevel = ai->getDifficultyLevel();
-	cin >> *difficultyLevel;
+	cin >> *Ai::getDifficultyLevel();
 }
 
-void GameManager::setMapSize(std::shared_ptr<Map> map) {
-	auto mapSizeHeight = map->getMapSizeHeight();
-	auto mapSizeWidth = map->getMapSizeWidth();
-	
+void GameManager::setMapSize() {	
 	cout << "Change height:";
-	cin >> *mapSizeHeight;
+	cin >> *Map::getMapSizeHeight();
 
 	cout << "Change width:";
-	cin >> *mapSizeWidth;
-	
-	map->setVecMap2D();
+	cin >> *Map::getMapSizeWidth();
 }
 /*--------SETTINGS-END---------*/

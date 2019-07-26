@@ -9,16 +9,16 @@ public:
 	~GameManager() = default;
 
 	char menu();
-	void settings(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai);
-	bool startGame(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai);
+	void settings();
+	bool startGame();
 	//Exit
 	void setExit() { exit = true; }	
 	bool getExit() { return exit; }
 private:
 	//Settings
-	void showSettingsMenu(std::shared_ptr<Map> map, std::shared_ptr<Ai> ai);
-	void setDifficultyLevel(std::shared_ptr<Ai> ai);
-	void setMapSize(std::shared_ptr<Map> map);
+	void showSettingsMenu();
+	void setDifficultyLevel();
+	void setMapSize();
 	//Menu
 	void showMenu();
 	//Others
