@@ -5,5 +5,4 @@ public:
 	BotMap();
 	~BotMap() = default;
 private:
-
 };

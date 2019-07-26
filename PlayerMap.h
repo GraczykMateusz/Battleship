@@ -7,5 +7,4 @@ public:
 	PlayerMap();
 	~PlayerMap() = default;
 private:
-	
 };
