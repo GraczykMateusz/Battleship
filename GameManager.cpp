@@ -74,21 +74,44 @@ void GameManager::settings() {
 void GameManager::showSettingsMenu() {
 	cout << "---- CURRENT SETTINGS ----" << endl;
 	cout << "1.Difficulty level: " << *Ai::getDifficultyLevel() << "  (EASY, MEDIUM, HARD)" << endl;
-	cout << "2.Map height:" << *Map::getMapSizeHeight() << ", width:" << *Map::getMapSizeWidth() << "   (10-20)" << endl;	
+	cout << "2.Map height:" << *Map::getMapSizeHeight() << ", width:" << *Map::getMapSizeWidth() << "   (5-15)" << endl;	
 	cout << "3.Back" << endl;
 	cout << "Select:";
 }
 
 void GameManager::setDifficultyLevel() {
-	cout << "Change:";
-	cin >> *Ai::getDifficultyLevel();
+	cout << "Write capital letters!" << endl;
+	do {	
+		wrongInput(*Ai::getDifficultyLevel());
+		
+		cout << "Change:";
+		cin >> *Ai::getDifficultyLevel();
+	} while(*Ai::getDifficultyLevel() != "EASY" && *Ai::getDifficultyLevel() != "MEDIUM" && *Ai::getDifficultyLevel() != "HARD");
 }
 
 void GameManager::setMapSize() {	
-	cout << "Change height:";
-	cin >> *Map::getMapSizeHeight();
+	cout << "Choose between (5-15)!" << endl;
+	do {
+		wrongInput(*Map::getMapSizeHeight());
+		cout << "Change height:";
+		cin >> *Map::getMapSizeHeight();
+	}while(*Map::getMapSizeHeight() < 5 || *Map::getMapSizeHeight() > 15);
 
-	cout << "Change width:";
-	cin >> *Map::getMapSizeWidth();
+	do {
+		wrongInput(*Map::getMapSizeWidth());
+		cout << "Change width:";
+		cin >> *Map::getMapSizeWidth();
+	} while(*Map::getMapSizeWidth() < 5 || *Map::getMapSizeWidth() > 15);
 }
+
+void GameManager::wrongInput(std::string inputDifficult) {
+	if(inputDifficult != "EASY" && inputDifficult != "MEDIUM" && inputDifficult != "HARD")
+		cout << "Wrong input! ";
+}
+
+void GameManager::wrongInput(int inputNumber) {
+	if(inputNumber < 5 || inputNumber > 15)
+	        cout << "Wrong input! ";
+}
+
 /*--------SETTINGS-END---------*/

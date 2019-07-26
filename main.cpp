@@ -6,17 +6,15 @@
 #include "Ai.h"
 
 int main() {
-	std::shared_ptr<Map> map(new Map());
-	std::shared_ptr<Ai> ai(new Ai());
 	std::unique_ptr<GameManager> gameManager(new GameManager());
 	do {
 		systemClear();
 		switch (gameManager->menu()) {
 			case '1':	
-				gameManager->startGame(map, ai);
+				gameManager->startGame();
 			break;
 			case '2':
-				gameManager->settings(map, ai);
+				gameManager->settings();
 			break;	
 			case '3':
 				gameManager->setExit();

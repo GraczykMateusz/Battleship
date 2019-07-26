@@ -22,6 +22,8 @@ private:
 	//Menu
 	void showMenu();
 	//Others
+	void wrongInput(std:: string inputDifficult);
+	void wrongInput(int inputSize);
 	char playerSelect();
 	char select;
 	bool exit;
