@@ -6,9 +6,12 @@
 using std::cout;
 using std::endl;
 
+unsigned int Map::mapSizeHeight = 5;
+unsigned int Map::mapSizeWidth = 10;
+unsigned int* Map::getMapSizeHeight() { return &mapSizeHeight; }
+unsigned int* Map::getMapSizeWidth() { return &mapSizeWidth; }
+
 Map::Map() {
-	mapSizeHeight = 5;
-	mapSizeWidth = 10;	
 	setVecMap2D();
 }
 

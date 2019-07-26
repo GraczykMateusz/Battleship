@@ -1,3 +1,4 @@
+#pragma once
 #include <vector>
 
 class Map {
@@ -5,17 +6,15 @@ public:
 	Map();
 	~Map() = default;
 
-	unsigned int* getMapSizeHeight() { return &mapSizeHeight; }
-	unsigned int* getMapSizeWidth() { return &mapSizeWidth; }
+	static unsigned int* getMapSizeHeight();
+	static unsigned int* getMapSizeWidth();
 	std::vector<std::vector<int>>* getVecMap2D() { return &vecMap2D; }
 	void setVecMap2D();
 	void showMap();
 private:
-	unsigned int mapSizeHeight;
-	unsigned int mapSizeWidth;
+	static unsigned int mapSizeHeight;
+	static unsigned int mapSizeWidth;
 	std::vector<std::vector<int>> vecMap2D; //[Width][Height]
 	void setMap();	
 	char setLastLetterAscii();
 };
-
-
