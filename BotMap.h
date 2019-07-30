@@ -4,5 +4,6 @@ class BotMap : public Map {
 public:
 	BotMap();
 	~BotMap() = default;
-private:
+
+	void showMapName();
 };
