@@ -6,5 +6,6 @@ class PlayerMap	 : public Map {
 public:
 	PlayerMap();
 	~PlayerMap() = default;
-private:
+	
+	void showMapName();
 };
