@@ -8,4 +8,5 @@ public:
 	~PlayerMap() = default;
 	
 	void showMapName();
+	void setShipsOnMap(std::vector<int>* ship);
 };
