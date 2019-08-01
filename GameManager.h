@@ -2,12 +2,13 @@
 
 class Map;
 class Ai;
+class Ship;
 
 class GameManager {
 public:
 	GameManager() = default;
 	~GameManager() = default;
-
+	//Others
 	char menu();
 	void settings();
 	bool startGame();
@@ -21,10 +22,13 @@ private:
 	void setMapSize();
 	//Menu
 	void showMenu();
-	//Others
+	//Input/Select
 	void wrongInput(std:: string inputDifficult);
 	void wrongInput(int inputSize);
 	char playerSelect();
 	char select;
+	char input;
+	//Others
+	void help();
 	bool exit;
 };

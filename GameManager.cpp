@@ -8,6 +8,7 @@
 #include "systemClear.h"
 #include "BotMap.h"
 #include "PlayerMap.h"
+#include "Ship.h"
 
 using std::cin;
 using std::cout;
@@ -25,10 +26,10 @@ void GameManager::showMenu() {
 	cout << "1.Start" << endl;
 	cout << "2.Settings" << endl;
 	cout << "3.Exit" << endl;
-	cout << "Select:";
 }
 
 char GameManager::playerSelect() {
+	cout << "Select: ";
 	cin >> select;
 	return select;
 }
@@ -36,15 +37,55 @@ char GameManager::playerSelect() {
 
 /*------------START--------------*/
 bool GameManager::startGame() {
-	systemClear();
-
 	std::unique_ptr<BotMap> botMap(new BotMap());
 	std::unique_ptr<PlayerMap> playerMap(new PlayerMap());
+	std::shared_ptr<Ship> ship(new Ship());
+
+	systemClear();
+	help();
 	
+	playerMap->showMapName();	
 	playerMap->showMap();
+
+	botMap->showMapName();
 	botMap->showMap();
-		
-	playerSelect();
+
+	ship->showShipsSelection();	
+	
+	switch(playerSelect()) { //Player chooses which ship he wants to put into the map
+	case '1':
+		do {
+			systemClear();
+			help();
+
+			playerMap->setShipsOnMap(ship->getShip1());
+
+			playerMap->showMapName();
+			playerMap->showMap();
+
+			botMap->showMapName();
+			botMap->showMap();
+
+			ship->showShipsSelection();
+			
+			cin >> input;
+		} while(input != 'q');
+	break;
+	case '2':
+	break;
+	case '3':
+	break;
+	case '4':
+	break;
+	case '5':
+	break;
+	default:
+	break;
+	}
+}
+
+void GameManager::help() {
+	cout << "\u25A0-ship, X-hit, O-miss, ' '-free." << endl << endl;
 }
 /*----------START-END------------*/
 
