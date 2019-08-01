@@ -13,9 +13,9 @@ public:
 	std::vector<int>* getShip4() { return &ship4; }
 	std::vector<int>* getShip5() { return &ship5; }
 private:                        
-	std::vector<int> ship1 {1, 2}; // '2' is a number which means ship
-	std::vector<int> ship2 {2, 2};
-	std::vector<int> ship3 {3, 2};
-	std::vector<int> ship4 {4, 2}; 
-	std::vector<int> ship5 {5, 2}; 
+	std::vector<int> ship1{std::vector<int>(1, 2)}; // '2' is a number which means ship
+	std::vector<int> ship2{std::vector<int>(2, 2)};
+	std::vector<int> ship3{std::vector<int>(3, 2)};
+	std::vector<int> ship4{std::vector<int>(4, 2)}; 
+	std::vector<int> ship5{std::vector<int>(5, 2)}; 
 };
