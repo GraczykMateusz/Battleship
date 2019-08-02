@@ -58,7 +58,7 @@ bool GameManager::startGame() {
 			systemClear();
 			help();
 
-			playerMap->setShipsOnMap(ship->getShip1());
+			playerMap->setShipsOnMap(ship->getShip1(), ship->getShipPositionX(), ship->getShipPositionY());
 
 			playerMap->showMapName();
 			playerMap->showMap();
@@ -67,9 +67,11 @@ bool GameManager::startGame() {
 			botMap->showMap();
 
 			ship->showShipsSelection();
+			ship->setShipsPosition();
 			
-			cin >> input;
-		} while(input != 'q');
+			if(ship->getShipIsMoved())
+				playerMap->resetOldShipPosition(ship->getOldShipPositionX(), ship->getOldShipPositionY());	
+		} while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 	break;
 	case '2':
 	break;

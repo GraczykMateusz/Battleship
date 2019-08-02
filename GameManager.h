@@ -27,7 +27,6 @@ private:
 	void wrongInput(int inputSize);
 	char playerSelect();
 	char select;
-	char input;
 	//Others
 	void help();
 	bool exit;
