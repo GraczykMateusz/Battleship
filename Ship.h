@@ -6,7 +6,7 @@ public:
 	~Ship() = default;
 
 	void showShipsSelection();
-	void setShipsPosition();
+	void setShipsPosition(unsigned int widthMax, unsigned int heightMax);
 
 	int* getShipPositionX() { return &shipPositionX; }
 	int* getShipPositionY() { return &shipPositionY; }
