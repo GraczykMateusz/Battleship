@@ -58,7 +58,7 @@ bool GameManager::startGame() {
 			systemClear();
 			help();
 
-			playerMap->setShipsOnMap(ship->getShip1(), ship->getShipPositionX(), ship->getShipPositionY());
+			playerMap->setShip1(ship->getShip1(), ship->getShipPositionX(), ship->getShipPositionY());
 
 			playerMap->showMapName();
 			playerMap->showMap();
@@ -67,19 +67,91 @@ bool GameManager::startGame() {
 			botMap->showMap();
 
 			ship->showShipsSelection();
-			ship->setShipsPosition();
+			ship->setShipsPosition(*Map::getMapSizeWidth(), *Map::getMapSizeHeight());
 			
 			if(ship->getShipIsMoved())
-				playerMap->resetOldShipPosition(ship->getOldShipPositionX(), ship->getOldShipPositionY());	
+				playerMap->resetOldShip1Position(ship->getOldShipPositionX(), ship->getOldShipPositionY());	
 		} while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 	break;
 	case '2':
+		do {
+                        systemClear();
+                        help();
+ 
+                        playerMap->setShip2(ship->getShip2(), ship->getShipPositionX(), ship->getShipPositionY());
+ 
+                        playerMap->showMapName();
+                        playerMap->showMap();
+ 
+                        botMap->showMapName();
+                        botMap->showMap();
+
+                        ship->showShipsSelection();
+                        ship->setShipsPosition(*Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+
+                        if(ship->getShipIsMoved())
+	                        playerMap->resetOldShip2Position(ship->getOldShipPositionX(), ship->getOldShipPositionY());
+                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 	break;
 	case '3':
+		do {
+                        systemClear();
+                        help();
+ 
+                        playerMap->setShip3(ship->getShip3(), ship->getShipPositionX(), ship->getShipPositionY());
+ 
+                        playerMap->showMapName();
+                        playerMap->showMap();
+ 
+                        botMap->showMapName();
+                        botMap->showMap();
+ 
+                        ship->showShipsSelection();
+                        ship->setShipsPosition(*Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+ 
+                        if(ship->getShipIsMoved())
+                                playerMap->resetOldShip3Position(ship->getOldShipPositionX(), ship->getOldShipPositionY());
+                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 	break;
 	case '4':
+		do {
+                        systemClear();
+                        help();
+   
+                        playerMap->setShip4(ship->getShip4(), ship->getShipPositionX(), ship->getShipPositionY());
+   
+                        playerMap->showMapName();
+                        playerMap->showMap();
+   
+                        botMap->showMapName();
+                        botMap->showMap();
+   
+                        ship->showShipsSelection();
+                        ship->setShipsPosition(*Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+   
+                        if(ship->getShipIsMoved())
+                                playerMap->resetOldShip4Position(ship->getOldShipPositionX(), ship->getOldShipPositionY());
+                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 	break;
 	case '5':
+		do {
+                        systemClear();
+                        help();
+    
+                        playerMap->setShip5(ship->getShip5(), ship->getShipPositionX(), ship->getShipPositionY());
+    
+                        playerMap->showMapName();
+                        playerMap->showMap();
+   
+                        botMap->showMapName();
+                        botMap->showMap();
+   
+                        ship->showShipsSelection();
+                        ship->setShipsPosition(*Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+   
+                        if(ship->getShipIsMoved())
+                                playerMap->resetOldShip5Position(ship->getOldShipPositionX(), ship->getOldShipPositionY());
+                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 	break;
 	default:
 	break;
