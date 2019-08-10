@@ -58,7 +58,7 @@ bool GameManager::startGame() {
 			systemClear();
 			help();
 
-			playerMap->setShip1(ship->getShip1(), ship->getShipPositionX(), ship->getShipPositionY());
+			playerMap->setShip(ship->getShip1(), ship->getShipPositionX(), ship->getShipPositionY());
 
 			playerMap->showMapName();
 			playerMap->showMap();
@@ -70,7 +70,7 @@ bool GameManager::startGame() {
 			ship->setShipsPosition(*Map::getMapSizeWidth(), *Map::getMapSizeHeight());
 			
 			if(ship->getShipIsMoved())
-				playerMap->resetOldShip1Position(ship->getOldShipPositionX(), ship->getOldShipPositionY());	
+				playerMap->resetOldShipPosition(ship->getShip1(), ship->getOldShipPositionX(), ship->getOldShipPositionY());	
 		} while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 	break;
 	case '2':
@@ -78,7 +78,7 @@ bool GameManager::startGame() {
                         systemClear();
                         help();
  
-                        playerMap->setShip2(ship->getShip2(), ship->getShipPositionX(), ship->getShipPositionY());
+                        playerMap->setShip(ship->getShip2(), ship->getShipPositionX(), ship->getShipPositionY());
  
                         playerMap->showMapName();
                         playerMap->showMap();
@@ -90,7 +90,7 @@ bool GameManager::startGame() {
                         ship->setShipsPosition(*Map::getMapSizeWidth(), *Map::getMapSizeHeight());
 
                         if(ship->getShipIsMoved())
-	                        playerMap->resetOldShip2Position(ship->getOldShipPositionX(), ship->getOldShipPositionY());
+	                        playerMap->resetOldShipPosition(ship->getShip2(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
                  } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 	break;
 	case '3':
@@ -98,7 +98,7 @@ bool GameManager::startGame() {
                         systemClear();
                         help();
  
-                        playerMap->setShip3(ship->getShip3(), ship->getShipPositionX(), ship->getShipPositionY());
+                        playerMap->setShip(ship->getShip3(), ship->getShipPositionX(), ship->getShipPositionY());
  
                         playerMap->showMapName();
                         playerMap->showMap();
@@ -110,7 +110,7 @@ bool GameManager::startGame() {
                         ship->setShipsPosition(*Map::getMapSizeWidth(), *Map::getMapSizeHeight());
  
                         if(ship->getShipIsMoved())
-                                playerMap->resetOldShip3Position(ship->getOldShipPositionX(), ship->getOldShipPositionY());
+                                playerMap->resetOldShipPosition(ship->getShip3(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
                  } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 	break;
 	case '4':
@@ -118,7 +118,7 @@ bool GameManager::startGame() {
                         systemClear();
                         help();
    
-                        playerMap->setShip4(ship->getShip4(), ship->getShipPositionX(), ship->getShipPositionY());
+                        playerMap->setShip(ship->getShip4(), ship->getShipPositionX(), ship->getShipPositionY());
    
                         playerMap->showMapName();
                         playerMap->showMap();
@@ -130,7 +130,7 @@ bool GameManager::startGame() {
                         ship->setShipsPosition(*Map::getMapSizeWidth(), *Map::getMapSizeHeight());
    
                         if(ship->getShipIsMoved())
-                                playerMap->resetOldShip4Position(ship->getOldShipPositionX(), ship->getOldShipPositionY());
+                                playerMap->resetOldShipPosition(ship->getShip4(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
                  } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 	break;
 	case '5':
@@ -138,7 +138,7 @@ bool GameManager::startGame() {
                         systemClear();
                         help();
     
-                        playerMap->setShip5(ship->getShip5(), ship->getShipPositionX(), ship->getShipPositionY());
+                        playerMap->setShip(ship->getShip5(), ship->getShipPositionX(), ship->getShipPositionY());
     
                         playerMap->showMapName();
                         playerMap->showMap();
@@ -150,7 +150,7 @@ bool GameManager::startGame() {
                         ship->setShipsPosition(*Map::getMapSizeWidth(), *Map::getMapSizeHeight());
    
                         if(ship->getShipIsMoved())
-                                playerMap->resetOldShip5Position(ship->getOldShipPositionX(), ship->getOldShipPositionY());
+                                playerMap->resetOldShipPosition(ship->getShip5(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
                  } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 	break;
 	default:
