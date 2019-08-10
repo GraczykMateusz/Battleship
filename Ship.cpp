@@ -16,7 +16,7 @@ void Ship::showShipsSelection() {
 	cout << "1.\u25A0 2.\u25A0\u25A0 3.\u25A0\u25A0\u25A0 4.\u25A0\u25A0\u25A0\u25A0 5.\u25A0\u25A0\u25A0\u25A0\u25A0" << endl;
 }
 
-void Ship::setShipsPosition(unsigned int widthMax, unsigned int heightMax) {
+void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsigned int heightMax) {
 	shipIsMoved = false; //First think that player doesnt move ship
 
 	//help
@@ -36,8 +36,8 @@ void Ship::setShipsPosition(unsigned int widthMax, unsigned int heightMax) {
 	//vertical move (Y)
 	do { //protection against wrong input (go outside the map)
 	cout << "Vertical:";
-	cin >> moveY;
-	} while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax ||  moveY > 1 || moveY < -1);
+	cin >> moveY;								
+	} while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax || shipPositionY + (*ship).size() + moveY > heightMax || moveY > 1 || moveY < -1);
 
 	// set old and new position
 	oldShipPositionY = shipPositionY;
