@@ -9,6 +9,7 @@ using std::cin;
 Ship::Ship() {
 	shipPositionX = 0;
 	shipPositionY = 0;
+	shipsOnMapCount = 0;
 }
 
 void Ship::showShipsSelection() {
@@ -43,4 +44,9 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
 	oldShipPositionY = shipPositionY;
 	shipPositionY += moveY;
 	shipIsMoved = true;
+}
+
+void Ship::resetPosition() {
+	shipPositionX = 0;
+	shipPositionY = 0;
 }

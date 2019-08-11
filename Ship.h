@@ -10,11 +10,16 @@ public:
 
 	int* getShipPositionX() { return &shipPositionX; }
 	int* getShipPositionY() { return &shipPositionY; }
+	void resetPosition();	
+
 	int getOldShipPositionX() { return oldShipPositionX; }
 	int getOldShipPositionY() { return oldShipPositionY; }
+
 	short getMoveX() { return moveX; }
 	short getMoveY() { return moveY; }
+
 	bool getShipIsMoved() { return shipIsMoved; }	
+	short getShipsOnMapCount() { return shipsOnMapCount; }
 
 	std::vector<int>* getShip1() { return &ship1; }
 	std::vector<int>* getShip2() { return &ship2; }
@@ -24,11 +29,16 @@ public:
 private:                        
 	int shipPositionX;
         int shipPositionY;
+
 	int oldShipPositionX;
 	int oldShipPositionY;
+
 	short moveX;
 	short moveY;
+
 	bool shipIsMoved;
+
+	short shipsOnMapCount;
 
 	std::vector<int> ship1{std::vector<int>(1, 2)}; // '2' is a number which means ship
 	std::vector<int> ship2{std::vector<int>(2, 2)};
