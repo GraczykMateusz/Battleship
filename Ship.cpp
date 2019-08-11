@@ -30,10 +30,11 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
 	} while(shipPositionX + moveX < 0 || shipPositionX + moveX >= widthMax || moveX > 1 || moveX < -1);
 
 	// set old and new position
-	oldShipPositionX = shipPositionX;
-	shipPositionX += moveX;
-	shipIsMoved = true;
-
+	if(moveX != 0) {
+		oldShipPositionX = shipPositionX;
+		shipPositionX += moveX;
+		shipIsMoved = true;
+	}
 	//vertical move (Y)
 	do { //protection against wrong input (go outside the map)
 	cout << "Vertical:";
@@ -41,9 +42,11 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
 	} while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax || shipPositionY + (*ship).size() + moveY > heightMax || moveY > 1 || moveY < -1);
 
 	// set old and new position
-	oldShipPositionY = shipPositionY;
-	shipPositionY += moveY;
-	shipIsMoved = true;
+	if(moveY != 0) {
+		oldShipPositionY = shipPositionY;
+		shipPositionY += moveY;
+		shipIsMoved = true;
+	}
 }
 
 void Ship::resetPosition() {
