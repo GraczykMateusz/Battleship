@@ -19,7 +19,10 @@ public:
 	short getMoveY() { return moveY; }
 
 	bool getShipIsMoved() { return shipIsMoved; }	
+	bool getShipIsRotated() { return shipIsRotated; }
+	
 	short getShipsOnMapCount() { return shipsOnMapCount; }
+	short getShipMaxCount() { return shipMaxCount; }
 
 	std::vector<int>* getShip1() { return &ship1; }
 	std::vector<int>* getShip2() { return &ship2; }
@@ -37,8 +40,10 @@ private:
 	short moveY;
 
 	bool shipIsMoved;
+	bool shipIsRotated;
 
 	short shipsOnMapCount;
+	const short shipMaxCount = 5;
 
 	std::vector<int> ship1{std::vector<int>(1, 2)}; // '2' is a number which means ship
 	std::vector<int> ship2{std::vector<int>(2, 2)};
