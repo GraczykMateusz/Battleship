@@ -12,5 +12,9 @@ public:
 	void resetOldShipPosition(std::vector<int>* ship, bool shipIsRotated, int oldShipPositionX, int oldShipPositionY);
 
 	void setShip(std::vector<int>* ship, bool shipIsRotated, int* shipPositionX, int* shipPositionY);
+	bool isShipOnMap(short shipNumber);
+	void shipIsOnMap(short shipNumber);
+	std::vector<short> getVecShipOnMap() { return vecShipOnMap; }
 private:
+	std::vector<short> vecShipOnMap;
 };
