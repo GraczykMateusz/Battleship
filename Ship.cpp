@@ -7,9 +7,10 @@ using std::endl;
 using std::cin;
 
 Ship::Ship() {
+	oldShipPositionX = 0;
+	oldShipPositionY = 0;
 	shipPositionX = 0;
 	shipPositionY = 0;
-	shipsOnMapCount = 0;
 }
 
 void Ship::showShipsSelection() {
@@ -18,13 +19,13 @@ void Ship::showShipsSelection() {
 }
 
 void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsigned int heightMax) {
-	shipIsMoved = false; //First think that player doesnt move ship
+	shipIsMoved = false; // First think that player doesnt move ship
 
-	//help
+	// help
 	cout << "'-1' -left/top, '1' -right/bottom, '0' -accept position (do this twice)" << endl;
 	
-	//horizontal move (X)
-	do { //protection against wrong input (go outside the map)
+	// horizontal move (X)
+	do { // protection against wrong input (go outside the map)
 		cout << "Horizontal:";
 		cin >> moveX;
 	} while(shipPositionX + moveX < 0 || shipPositionX + moveX >= widthMax || moveX > 1 || moveX < -1);
@@ -35,8 +36,11 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
 		shipPositionX += moveX;
 		shipIsMoved = true;
 	}
-	//vertical move (Y)
-	do { //protection against wrong input (go outside the map)
+	else {
+		oldShipPositionX = shipPositionX;
+	}
+	// vertical move (Y)
+	do { // protection against wrong input (go outside the map)
 	cout << "Vertical:";
 	cin >> moveY;								
 	} while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax || shipPositionY + (*ship).size() + moveY > heightMax || moveY > 1 || moveY < -1);
@@ -47,9 +51,14 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
 		shipPositionY += moveY;
 		shipIsMoved = true;
 	}
+	else {
+		oldShipPositionY = shipPositionY;
+	}
 }
 
 void Ship::resetPosition() {
+	oldShipPositionX = 0;
+	oldShipPositionY = 0;
 	shipPositionX = 0;
 	shipPositionY = 0;
 }
