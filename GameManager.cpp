@@ -41,11 +41,11 @@ bool GameManager::startGame() {
 	std::unique_ptr<PlayerMap> playerMap(new PlayerMap());
 	std::shared_ptr<Ship> ship(new Ship());
 	
-	do { //Work until switch every case
+	do { // Work until switch every case
 		systemClear();
 		help();
 		ship->resetPosition();
-	
+
 		playerMap->showMapName();	
 		playerMap->showMap();
 
@@ -53,112 +53,127 @@ bool GameManager::startGame() {
 		botMap->showMap();
 
 		ship->showShipsSelection();	
-		
-		switch(playerSelect()) { //Player chooses which ship he wants to put into the map
-		case '1':
-			do {
-				systemClear();
-				help();
-
-				playerMap->setShip(ship->getShip1(), ship->getShipIsRotated(), ship->getShipPositionX(), ship->getShipPositionY());
 	
-				playerMap->showMapName();
-				playerMap->showMap();
+		switch(playerSelect()) { // Player chooses which ship he wants to put into the map
+		case '1':
+			if(!playerMap->isShipOnMap(1)) {
+				playerMap->shipIsOnMap(1);
+				do {
+					systemClear();
+					help();
 
-				botMap->showMapName();
-				botMap->showMap();
+					playerMap->setShip(ship->getShip1(), ship->getShipIsRotated(), ship->getShipPositionX(), ship->getShipPositionY());
+	
+					playerMap->showMapName();
+					playerMap->showMap();
 
-				ship->showShipsSelection();
-				ship->setShipsPosition(ship->getShip1(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
-				
-				if(ship->getShipIsMoved())
-					playerMap->resetOldShipPosition(ship->getShip1(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());	
-			} while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
+					botMap->showMapName();
+					botMap->showMap();
+	
+					ship->showShipsSelection();
+					ship->setShipsPosition(ship->getShip1(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+		
+					if(ship->getShipIsMoved())
+						playerMap->resetOldShipPosition(ship->getShip1(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());	
+				} while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
+			}
 		break;
 		case '2':
-			do {
-	                        systemClear();
-	                        help(); 
+			if(!playerMap->isShipOnMap(2)) {
+				playerMap->shipIsOnMap(2);
+				do {
+		                        systemClear();
+		                        help(); 
 
-	                        playerMap->setShip(ship->getShip2(), ship->getShipIsRotated(), ship->getShipPositionX(), ship->getShipPositionY());
+		                        playerMap->setShip(ship->getShip2(), ship->getShipIsRotated(), ship->getShipPositionX(), ship->getShipPositionY());
  
-	                        playerMap->showMapName();
-	                        playerMap->showMap();
+		                        playerMap->showMapName();
+		                        playerMap->showMap();
  
-	                        botMap->showMapName();
-	                        botMap->showMap();
+		                        botMap->showMapName();
+		                        botMap->showMap();
 
-	                        ship->showShipsSelection();
-	                        ship->setShipsPosition(ship->getShip2(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+		                        ship->showShipsSelection();
+		                        ship->setShipsPosition(ship->getShip2(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
 
-	                        if(ship->getShipIsMoved())
-		                        playerMap->resetOldShipPosition(ship->getShip2(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
-	                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
+		                        if(ship->getShipIsMoved())
+			                        playerMap->resetOldShipPosition(ship->getShip2(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
+		                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
+			}
 		break;
 		case '3':
-			do {
-        	                systemClear();
-	                        help();
+			if(!playerMap->isShipOnMap(3)) {
+				playerMap->shipIsOnMap(3);
+				do {
+	        	                systemClear();
+		                        help();
  
-	                        playerMap->setShip(ship->getShip3(), ship->getShipIsRotated(), ship->getShipPositionX(), ship->getShipPositionY());
+		                        playerMap->setShip(ship->getShip3(), ship->getShipIsRotated(), ship->getShipPositionX(), ship->getShipPositionY());
  
-	                        playerMap->showMapName();
-	                        playerMap->showMap();
+		                        playerMap->showMapName();
+		                        playerMap->showMap();
  
-	                        botMap->showMapName();
-	                        botMap->showMap();
+		                        botMap->showMapName();
+		                        botMap->showMap();
  
-	                        ship->showShipsSelection();
-	                        ship->setShipsPosition(ship->getShip3(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+		                        ship->showShipsSelection();
+		                        ship->setShipsPosition(ship->getShip3(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
  
-	                        if(ship->getShipIsMoved())
-	                                playerMap->resetOldShipPosition(ship->getShip3(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
-	                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
+		                        if(ship->getShipIsMoved())
+		                                playerMap->resetOldShipPosition(ship->getShip3(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
+		                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
+			}
 		break;
 		case '4':
-			do {
-	                        systemClear();
-	                        help();
+			if(!playerMap->isShipOnMap(4)) {
+				playerMap->shipIsOnMap(4);
+				do {
+		                        systemClear();
+		                        help();
    
-	                        playerMap->setShip(ship->getShip4(), ship->getShipIsRotated(), ship->getShipPositionX(), ship->getShipPositionY());
+		                        playerMap->setShip(ship->getShip4(), ship->getShipIsRotated(), ship->getShipPositionX(), ship->getShipPositionY());
    
-	                        playerMap->showMapName();
-	                        playerMap->showMap();
+		                        playerMap->showMapName();
+		                        playerMap->showMap();
 	   
-	                        botMap->showMapName();
-	                        botMap->showMap();
+		                        botMap->showMapName();
+		                        botMap->showMap();
 	   
-	                        ship->showShipsSelection();
-	                        ship->setShipsPosition(ship->getShip4(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+		                        ship->showShipsSelection();
+		                        ship->setShipsPosition(ship->getShip4(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
 	   
-	                        if(ship->getShipIsMoved())
-	                                playerMap->resetOldShipPosition(ship->getShip4(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
-	                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
+		                        if(ship->getShipIsMoved())
+		                                playerMap->resetOldShipPosition(ship->getShip4(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
+		                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
+			}
 		break;
 		case '5':
-			do {
-	                        systemClear();
-	                        help();
+			if(!playerMap->isShipOnMap(5)) {
+				playerMap->shipIsOnMap(5);
+				do {
+		                        systemClear();
+		                        help();
 	    
-	                        playerMap->setShip(ship->getShip5(), ship->getShipIsRotated(), ship->getShipPositionX(), ship->getShipPositionY());
-	    
-	                        playerMap->showMapName();
-	                        playerMap->showMap();
+		                        playerMap->setShip(ship->getShip5(), ship->getShipIsRotated(), ship->getShipPositionX(), ship->getShipPositionY());
+		    
+		                        playerMap->showMapName();
+		                        playerMap->showMap();
 	   
-	                        botMap->showMapName();
-	                        botMap->showMap();
+		                        botMap->showMapName();
+		                        botMap->showMap();
 	   
-	                        ship->showShipsSelection();
-	                        ship->setShipsPosition(ship->getShip5(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+		                        ship->showShipsSelection();
+		                        ship->setShipsPosition(ship->getShip5(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
 	   
-	                        if(ship->getShipIsMoved())
-	                                playerMap->resetOldShipPosition(ship->getShip5(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
-	                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
+		                        if(ship->getShipIsMoved())
+		                                playerMap->resetOldShipPosition(ship->getShip5(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
+		                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
+			}
 		break;
 		default:
 		break;
 		}
-	} while(ship->getShipsOnMapCount() != ship->getShipMaxCount());
+	} while((playerMap->getVecShipOnMap()).size() != ship->getShipMaxCount());
 }
 
 void GameManager::help() {
