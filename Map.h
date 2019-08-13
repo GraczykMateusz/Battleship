@@ -8,7 +8,6 @@ public:
 
 	static unsigned int* getMapSizeHeight();
 	static unsigned int* getMapSizeWidth();
-//	std::vector<std::vector<int>>* getVecMap2D() { return &vecMap2D; }
 	void setVecMap2D();
 	void showMap();
 protected:
