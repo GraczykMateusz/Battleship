@@ -29,7 +29,7 @@ void GameManager::showMenu() {
 }
 
 char GameManager::playerSelect() {
-	cout << "Select: ";
+	cout << "Select:";
 	cin >> select;
 	return select;
 }
@@ -40,7 +40,7 @@ bool GameManager::startGame() {
 	std::unique_ptr<BotMap> botMap(new BotMap());
 	std::unique_ptr<PlayerMap> playerMap(new PlayerMap());
 	std::shared_ptr<Ship> ship(new Ship());
-	
+
 	do { // Work until switch every case
 		systemClear();
 		help();
@@ -53,7 +53,8 @@ bool GameManager::startGame() {
 		botMap->showMap();
 
 		ship->showShipsSelection();	
-	
+
+		//----------PLAYER----------//	
 		switch(playerSelect()) { // Player chooses which ship he wants to put into the map
 		case '1':
 			if(!playerMap->isShipOnMap(1)) {
@@ -71,7 +72,7 @@ bool GameManager::startGame() {
 					botMap->showMap();
 	
 					ship->showShipsSelection();
-					ship->setShipsPosition(ship->getShip1(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+					ship->setShipsPosition(ship->getShip1(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), playerMap->getVecMap2D());
 		
 					if(ship->getShipIsMoved())
 						playerMap->resetOldShipPosition(ship->getShip1(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());	
@@ -94,7 +95,7 @@ bool GameManager::startGame() {
 		                        botMap->showMap();
 
 		                        ship->showShipsSelection();
-		                        ship->setShipsPosition(ship->getShip2(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+		                        ship->setShipsPosition(ship->getShip2(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), playerMap->getVecMap2D());
 
 		                        if(ship->getShipIsMoved())
 			                        playerMap->resetOldShipPosition(ship->getShip2(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
@@ -117,7 +118,7 @@ bool GameManager::startGame() {
 		                        botMap->showMap();
  
 		                        ship->showShipsSelection();
-		                        ship->setShipsPosition(ship->getShip3(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+		                        ship->setShipsPosition(ship->getShip3(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), playerMap->getVecMap2D());
  
 		                        if(ship->getShipIsMoved())
 		                                playerMap->resetOldShipPosition(ship->getShip3(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
@@ -140,7 +141,7 @@ bool GameManager::startGame() {
 		                        botMap->showMap();
 	   
 		                        ship->showShipsSelection();
-		                        ship->setShipsPosition(ship->getShip4(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+		                        ship->setShipsPosition(ship->getShip4(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), playerMap->getVecMap2D());
 	   
 		                        if(ship->getShipIsMoved())
 		                                playerMap->resetOldShipPosition(ship->getShip4(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
@@ -163,7 +164,7 @@ bool GameManager::startGame() {
 		                        botMap->showMap();
 	   
 		                        ship->showShipsSelection();
-		                        ship->setShipsPosition(ship->getShip5(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+		                        ship->setShipsPosition(ship->getShip5(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), playerMap->getVecMap2D());
 	   
 		                        if(ship->getShipIsMoved())
 		                                playerMap->resetOldShipPosition(ship->getShip5(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
@@ -174,10 +175,13 @@ bool GameManager::startGame() {
 		break;
 		}
 	} while((playerMap->getVecShipOnMap()).size() != ship->getShipMaxCount());
+
+	//-----------AI-----------//
+
 }
 
 void GameManager::help() {
-	cout << "\u25A0-ship, X-hit, O-miss, ' '-free." << endl << endl;
+	cout << "\u25A0-ship, X-hit, O-miss, '@' -ship on the ship ' '-free." << endl << endl;
 }
 /*----------START-END------------*/
 
@@ -209,7 +213,6 @@ void GameManager::showSettingsMenu() {
 	cout << "1.Difficulty level: " << *Ai::getDifficultyLevel() << "  (EASY, MEDIUM, HARD)" << endl;
 	cout << "2.Map height:" << *Map::getMapSizeHeight() << ", width:" << *Map::getMapSizeWidth() << "   (5-15)" << endl;	
 	cout << "3.Back" << endl;
-	cout << "Select:";
 }
 
 void GameManager::setDifficultyLevel() {
