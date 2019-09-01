@@ -14,27 +14,28 @@ void PlayerMap::showMapName() {
 void PlayerMap::resetOldShipPosition(std::vector<int>* ship, bool shipIsRotated, int oldShipPositionX, int oldShipPositionY) {
 	if(!shipIsRotated) {
 		for(int i = 0; i < (*ship).size(); i++)
-		        vecMap2D[oldShipPositionX][oldShipPositionY + i] = 0; // '0' means free position
+		        vecMap2D[oldShipPositionX][oldShipPositionY + i] -= 2; // '0' means free position
 	}
 	else {
 		for(int i = 0; i < (*ship).size(); i++)
-                        vecMap2D[oldShipPositionX + i][oldShipPositionY] = 0;
+                        vecMap2D[oldShipPositionX + i][oldShipPositionY] -= 2;
 	}
 }
 
 void PlayerMap::setShip(std::vector<int>* ship, bool shipIsRotated, int* shipPositionX, int* shipPositionY) {
 	if(!shipIsRotated) {
 		for(int i = 0; i < (*ship).size(); i++)
-			vecMap2D[*shipPositionX][*shipPositionY + i] = (*ship)[i];
+			vecMap2D[*shipPositionX][*shipPositionY + i] += 2; // '2' means the ship
 	}
 	else {
 		for(int i = 0; i < (*ship).size(); i++)
-                        vecMap2D[*shipPositionX + i][*shipPositionY] = (*ship)[i];
+                        vecMap2D[*shipPositionX + i][*shipPositionY] += 2;
 	}
 }
 
 void PlayerMap::shipIsOnMap(short shipNumber) {
-	std::cout << vecShipOnMap.size() << std::endl;
+	vecShipOnMap.push_back(shipNumber);
+	std::sort(vecShipOnMap.begin(), vecShipOnMap.end());
 }
 
 bool PlayerMap::isShipOnMap(short shipNumber) {
