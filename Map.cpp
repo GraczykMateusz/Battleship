@@ -55,7 +55,9 @@ void Map::showMap() {
 				cout << 'X';
 			if(vecMap2D[j][i] == 2) //Ship
 				cout << "\u25A0";
-	
+			if(vecMap2D[j][i] == 4) //Ship on ship
+				cout << '@';
+					
 			cout << '|'; //Show vertical line which separates positions
 		}
 		cout << endl; //Next line
