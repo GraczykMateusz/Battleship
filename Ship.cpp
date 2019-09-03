@@ -22,7 +22,7 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
 	shipIsMoved = false; // First think that player doesnt move ship
 
 	// help
-	cout << "'-1' -left/top, '1' -right/bottom, '2' -rotate, '0' -accept position (do this twice)" << endl;
+	cout << "'-1' -left/top, '1' -right/bottom, '2' -rotate (only in horizontal option), '0' -accept position (do this twice)" << endl;
 	
 	// protection against set ship on the ship
 	do {	
@@ -50,42 +50,33 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
 			
                         // set old and new position (X)
 			if(moveX != 2) {
-				setPositionX();
-			}
-			else {
-				if(checkIfShipCanRotateX(ship, widthMax))
-					shipIsRotated = false;
-			}
+                                setPositionX();
+                        } 
+                        else {
+                                if(checkIfShipCanRotateY(ship, heightMax))
+                        	        shipIsRotated = false;
+                        }
+
 		}	
 		// vertical move (Y)
-		if(!shipIsRotated) {
-			do { // protection against wrong input (go outside the map) [shipIsntRotated]
-				cout << "Vertical:";
-				cin >> moveY;								
-			} while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax || shipPositionY + (*ship).size() + moveY > heightMax || moveY > 2 || moveY < -1);
-	
-			// set old and new position (Y)
-			if(moveY != 2) {
+		if(moveX != 2) {
+			if(!shipIsRotated) {
+				do { // protection against wrong input (go outside the map) [shipIsntRotated]
+					cout << "Vertical:";
+					cin >> moveY;								
+				} while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax || shipPositionY + (*ship).size() + moveY > heightMax || moveY > 1 || moveY < -1);
+		
+				// set old and new position (Y)
 				setPositionY();
 			}
-			else {
-				if(checkIfShipCanRotateY(ship, heightMax))
-					shipIsRotated = true;
-			}
-		}
-		else { // vertical move (Y) ROTATED SHIP
-			do { // protection against wrong input (go outside the map)                     
-                                cout << "Vertical:";                                                    
-                                cin >> moveY;                                                           
-                        } while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax || moveY > 2 || moveY < -1);
-			
-			// set old and new position (Y)
-			if(moveY != 2) {
+			else { // vertical move (Y) ROTATED SHIP
+				do { // protection against wrong input (go outside the map)                     
+	                                cout << "Vertical:";                                                    
+	                                cin >> moveY;                                                           
+				} while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax || moveY > 1 || moveY < -1);
+				
+			   	// set old and new position (Y)
 				setPositionY();
-			}
-			else {
-				if(checkIfShipCanRotateY(ship, heightMax))
-					shipIsRotated = false;
 			}
 		}
 	} while(checkIfShipIsOnShip(widthMax, heightMax, vecMap2D) && moveX == 0 && moveY == 0);
