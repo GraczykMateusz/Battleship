@@ -27,7 +27,7 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
 	// protection against set ship on the ship
 	do {	
 		// horizontal move (X)
-		if(shipIsRotated) {
+		if(!shipIsRotated) {
 			do { // protection against wrong input (go outside the map) [shipIsntRotated]
 				cout << "Horizontal:";
 				cin >> moveX;
@@ -47,7 +47,7 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
 			do { // protection against wrong input (go outside the map) [shipIsRotated]
                                 cout << "Horizontal:";
                                 cin >> moveX;
-                        } while(shipPositionX + moveX < 0 || shipPositionX + (*ship).size() + moveX >= widthMax || moveX > 1 || moveX < -1);
+                        } while(shipPositionX + moveX < 0 || shipPositionX + (*ship).size() + moveX > widthMax || moveX > 1 || moveX < -1);
 			
                        // set old and new position
                         if(moveX != 0) {
@@ -60,7 +60,7 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
                         }
 		}	
 		// vertical move (Y)
-		if(shipIsRotated) {
+		if(!shipIsRotated) {
 			do { // protection against wrong input (go outside the map) [shipIsntRotated]
 				cout << "Vertical:";
 				cin >> moveY;								
