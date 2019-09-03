@@ -44,6 +44,10 @@ private:
 	int oldShipPositionX;
 	int oldShipPositionY;
 
+	// Set position X/Y
+	void setPositionX();
+	void setPositionY();
+
 	// Move
 	short moveX;
 	short moveY;
@@ -52,6 +56,8 @@ private:
 	bool shipIsMoved;
 	bool shipIsRotated;
 	bool checkIfShipIsOnShip(unsigned int widthMax, unsigned int heightMax, std::vector<std::vector<int>>* vecMap2D);	
+	bool checkIfShipCanRotateX(std::vector<int>* ship, unsigned int widthMax);
+	bool checkIfShipCanRotateY(std::vector<int>* ship, unsigned int heightMax);
 
 	// Ships count
 	const short shipMaxCount = 5;

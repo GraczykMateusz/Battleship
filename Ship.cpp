@@ -31,68 +31,82 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
 			do { // protection against wrong input (go outside the map) [shipIsntRotated]
 				cout << "Horizontal:";
 				cin >> moveX;
-			} while(shipPositionX + moveX < 0 || shipPositionX + moveX >= widthMax || moveX > 1 || moveX < -1);
+			} while(shipPositionX + moveX < 0 || shipPositionX + moveX >= widthMax || moveX > 2 || moveX < -1);
 	
-			// set old and new position
-			if(moveX != 0) {
-				oldShipPositionX = shipPositionX;
-				shipPositionX += moveX;
-				shipIsMoved = true;
-			}
+			// set old and new position (X)
+			if(moveX != 2) {
+				setPositionX();
+			} 
 			else {
-				oldShipPositionX = shipPositionX;
+				if(checkIfShipCanRotateX(ship, widthMax))
+					shipIsRotated = true;
 			}
 		}
 		else { // horizontal move (X) ROTATED SHIP
 			do { // protection against wrong input (go outside the map) [shipIsRotated]
                                 cout << "Horizontal:";
                                 cin >> moveX;
-                        } while(shipPositionX + moveX < 0 || shipPositionX + (*ship).size() + moveX > widthMax || moveX > 1 || moveX < -1);
+                        } while(shipPositionX + moveX < 0 || shipPositionX + (*ship).size() + moveX > widthMax || moveX > 2 || moveX < -1);
 			
-                       // set old and new position
-                        if(moveX != 0) {
-                                oldShipPositionX = shipPositionX;
-                                shipPositionX += moveX;
-                                shipIsMoved = true;
-                        }
-                        else {
-                                oldShipPositionX = shipPositionX;
-                        }
+                        // set old and new position (X)
+			if(moveX != 2) {
+				setPositionX();
+			}
+			else {
+				if(checkIfShipCanRotateX(ship, widthMax))
+					shipIsRotated = false;
+			}
 		}	
 		// vertical move (Y)
 		if(!shipIsRotated) {
 			do { // protection against wrong input (go outside the map) [shipIsntRotated]
 				cout << "Vertical:";
 				cin >> moveY;								
-			} while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax || shipPositionY + (*ship).size() + moveY > heightMax || moveY > 1 || moveY < -1);
+			} while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax || shipPositionY + (*ship).size() + moveY > heightMax || moveY > 2 || moveY < -1);
 	
-			// set old and new position
-			if(moveY != 0) {
-				oldShipPositionY = shipPositionY;
-				shipPositionY += moveY;
-				shipIsMoved = true;
+			// set old and new position (Y)
+			if(moveY != 2) {
+				setPositionY();
 			}
 			else {
-				oldShipPositionY = shipPositionY;
+				if(checkIfShipCanRotateY(ship, heightMax))
+					shipIsRotated = true;
 			}
 		}
 		else { // vertical move (Y) ROTATED SHIP
 			do { // protection against wrong input (go outside the map)                     
                                 cout << "Vertical:";                                                    
                                 cin >> moveY;                                                           
-                        } while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax || moveY > 1 || moveY < -1);
+                        } while(shipPositionY + moveY < 0 || shipPositionY + moveY >= heightMax || moveY > 2 || moveY < -1);
 			
-			// set old and new position
-                        if(moveY != 0) {
-                                oldShipPositionY = shipPositionY;
-                                shipPositionY += moveY;
-                                shipIsMoved = true;
-                        }
-                        else {
-                                oldShipPositionY = shipPositionY;
-                        }
+			// set old and new position (Y)
+			if(moveY != 2) {
+				setPositionY();
+			}
+			else {
+				if(checkIfShipCanRotateY(ship, heightMax))
+					shipIsRotated = false;
+			}
 		}
 	} while(checkIfShipIsOnShip(widthMax, heightMax, vecMap2D) && moveX == 0 && moveY == 0);
+}
+
+bool Ship::checkIfShipCanRotateX(std::vector<int>* ship, unsigned int widthMax) {
+	if(shipPositionX + (*ship).size() < widthMax) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+bool Ship::checkIfShipCanRotateY(std::vector<int>* ship, unsigned int heightMax) {
+        if(shipPositionY + (*ship).size() < heightMax) {
+                return true;
+        }
+        else {
+                return false;
+        }
 }
 
 bool Ship::checkIfShipIsOnShip(unsigned int widthMax, unsigned int heightMax, std::vector<std::vector<int>>* vecMap2D) {
@@ -103,6 +117,28 @@ bool Ship::checkIfShipIsOnShip(unsigned int widthMax, unsigned int heightMax, st
 		}
 	}
 	return false;
+}
+
+void Ship::setPositionX() {
+	if(moveX != 0) {
+		oldShipPositionX = shipPositionX;
+                shipPositionX += moveX;
+                shipIsMoved = true;
+        }
+        else {
+                oldShipPositionX = shipPositionX;
+        }
+}
+
+void Ship::setPositionY() {
+	if(moveY != 0) {
+		oldShipPositionY = shipPositionY;
+                shipPositionY += moveY;
+                shipIsMoved = true;
+        }
+        else {
+                oldShipPositionY = shipPositionY;
+        }
 }
 
 void Ship::resetPosition() {
