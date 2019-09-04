@@ -11,12 +11,23 @@ void PlayerMap::showMapName() {
 	std::cout << "Player's map:" << std::endl;
 }
 
-void PlayerMap::resetOldShipPosition(std::vector<int>* ship, bool shipIsRotated, int oldShipPositionX, int oldShipPositionY) {
-	if(!shipIsRotated) {
+void PlayerMap::resetOldShipPosition(std::vector<int>* ship, bool shipIsRotated, int oldShipPositionX, int oldShipPositionY, short moveX, int* shipPositionX, int* shipPositionY) {
+	if(moveX == 2) { // delete old ship after rotate
+		if(!shipIsRotated) { // delete 
+			for(int i = 0; i < (*ship).size(); i++)
+                        vecMap2D[*shipPositionX + i][*shipPositionY] -= 2; // '0' means free position
+		}
+		else { // delete
+			for(int i = 0; i < (*ship).size(); i++)
+                        vecMap2D[*shipPositionX][*shipPositionY + i] -= 2;
+		}
+	}
+	// delete old ship if normal move (horizontal/ vertical move)
+	if(!shipIsRotated && moveX != 2) {
 		for(int i = 0; i < (*ship).size(); i++)
 		        vecMap2D[oldShipPositionX][oldShipPositionY + i] -= 2; // '0' means free position
 	}
-	else {
+	if(shipIsRotated && moveX != 2) {
 		for(int i = 0; i < (*ship).size(); i++)
                         vecMap2D[oldShipPositionX + i][oldShipPositionY] -= 2;
 	}

@@ -9,7 +9,7 @@ public:
 	
 	void showMapName();
 
-	void resetOldShipPosition(std::vector<int>* ship, bool shipIsRotated, int oldShipPositionX, int oldShipPositionY);
+	void resetOldShipPosition(std::vector<int>* ship, bool shipIsRotated, int oldShipPositionX, int oldShipPositionY, short moveX, int* shipPositionX, int* shipPositionY);
 
 	void setShip(std::vector<int>* ship, bool shipIsRotated, int* shipPositionX, int* shipPositionY);
 	bool isShipOnMap(short shipNumber);
