@@ -38,8 +38,10 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
 				setPositionX();
 			} 
 			else {
-				if(checkIfShipCanRotateX(ship, widthMax))
+				if(checkIfShipCanRotateX(ship, widthMax)) {
+					shipIsMoved = true;
 					shipIsRotated = true;
+				}
 			}
 		}
 		else { // horizontal move (X) ROTATED SHIP
@@ -53,8 +55,10 @@ void Ship::setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsig
                                 setPositionX();
                         } 
                         else {
-                                if(checkIfShipCanRotateY(ship, heightMax))
-                        	        shipIsRotated = false;
+                                if(checkIfShipCanRotateY(ship, heightMax)) {
+                        	        shipIsMoved = true;
+					shipIsRotated = false;
+				}
                         }
 
 		}	
