@@ -75,7 +75,7 @@ bool GameManager::startGame() {
 					ship->setShipsPosition(ship->getShip1(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), playerMap->getVecMap2D());
 		
 					if(ship->getShipIsMoved())
-						playerMap->resetOldShipPosition(ship->getShip1(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());	
+						playerMap->resetOldShipPosition(ship->getShip1(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY(), ship->getMoveX(), ship->getShipPositionX(), ship->getShipPositionY());	
 				} while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 			}
 		break;
@@ -98,7 +98,7 @@ bool GameManager::startGame() {
 		                        ship->setShipsPosition(ship->getShip2(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), playerMap->getVecMap2D());
 
 		                        if(ship->getShipIsMoved())
-			                        playerMap->resetOldShipPosition(ship->getShip2(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
+			                        playerMap->resetOldShipPosition(ship->getShip2(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY(), ship->getMoveX(), ship->getShipPositionX(), ship->getShipPositionY());
 		                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 			}
 		break;
@@ -121,7 +121,7 @@ bool GameManager::startGame() {
 		                        ship->setShipsPosition(ship->getShip3(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), playerMap->getVecMap2D());
  
 		                        if(ship->getShipIsMoved())
-		                                playerMap->resetOldShipPosition(ship->getShip3(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
+		                                playerMap->resetOldShipPosition(ship->getShip3(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY(), ship->getMoveX(), ship->getShipPositionX(), ship->getShipPositionY());
 		                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 			}
 		break;
@@ -144,7 +144,7 @@ bool GameManager::startGame() {
 		                        ship->setShipsPosition(ship->getShip4(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), playerMap->getVecMap2D());
 	   
 		                        if(ship->getShipIsMoved())
-		                                playerMap->resetOldShipPosition(ship->getShip4(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
+		                                playerMap->resetOldShipPosition(ship->getShip4(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY(), ship->getMoveX(), ship->getShipPositionX(), ship->getShipPositionY());
 		                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 			}
 		break;
@@ -167,7 +167,7 @@ bool GameManager::startGame() {
 		                        ship->setShipsPosition(ship->getShip5(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), playerMap->getVecMap2D());
 	   
 		                        if(ship->getShipIsMoved())
-		                                playerMap->resetOldShipPosition(ship->getShip5(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY());
+		                                playerMap->resetOldShipPosition(ship->getShip5(), ship->getShipIsRotated(), ship->getOldShipPositionX(), ship->getOldShipPositionY(), ship->getMoveX(), ship->getShipPositionX(), ship->getShipPositionY());
 		                 } while(ship->getMoveX() != 0 || ship->getMoveY() != 0);
 			}
 		break;
