@@ -181,7 +181,7 @@ bool GameManager::startGame() {
 }
 
 void GameManager::help() {
-	cout << "\u25A0-ship, X-hit, O-miss, '@' -ship on the ship ' '-free." << endl << endl;
+	cout << "'\u25A0' -ship, 'X' -hit, 'O' -miss, '@' -ship on the ship, ' ' -free." << endl << endl;
 }
 /*----------START-END------------*/
 
