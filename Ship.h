@@ -11,7 +11,7 @@ public:
 	// New position
 	int* getShipPositionX() { return &shipPositionX; }
 	int* getShipPositionY() { return &shipPositionY; }
-	void setShipsPosition(std::vector<int>* ship, unsigned int widthMax, unsigned int heightMax, std::vector<std::vector<int>>* vecMap2D);
+	void setShipsPosition(std::vector<int>* ship, unsigned int& widthMax, unsigned int& heightMax, std::vector<std::vector<int>>* vecMap2D);
 	void resetPosition();	
 
 	// Old position
@@ -55,9 +55,9 @@ private:
 	// Move settings
 	bool shipIsMoved;
 	bool shipIsRotated;
-	bool checkIfShipIsOnShip(unsigned int widthMax, unsigned int heightMax, std::vector<std::vector<int>>* vecMap2D);	
-	bool checkIfShipCanRotateX(std::vector<int>* ship, unsigned int widthMax);
-	bool checkIfShipCanRotateY(std::vector<int>* ship, unsigned int heightMax);
+	bool checkIfShipIsOnShip(unsigned int& widthMax, unsigned int& heightMax, std::vector<std::vector<int>>* vecMap2D);	
+	bool checkIfShipCanRotateX(std::vector<int>* ship, unsigned int& widthMax);
+	bool checkIfShipCanRotateY(std::vector<int>* ship, unsigned int& heightMax);
 
 	// Ships count
 	const short shipMaxCount = 5;
