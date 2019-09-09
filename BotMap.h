@@ -1,4 +1,5 @@
 #include "Map.h"
+#include <vector>
 
 class BotMap : public Map {
 public:
@@ -6,4 +7,6 @@ public:
 	~BotMap() = default;
 
 	void showMapName();
+	void setShip(std::vector<int>* botShipPosition, std::vector<int>* isRotateVec);
+private:
 };
