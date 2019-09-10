@@ -7,6 +7,6 @@ public:
 	~BotMap() = default;
 
 	void showMapName();
-	void setShip(std::vector<int>* botShipPosition, std::vector<int>* isRotateVec);
+	void setShip(std::vector<int>* botShipPosition, std::vector<int>* isRotateVec, std::vector<int>* ship);
 private:
 };
