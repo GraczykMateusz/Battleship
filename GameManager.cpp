@@ -41,7 +41,7 @@ bool GameManager::startGame() {
 	std::unique_ptr<PlayerMap> playerMap(new PlayerMap());
 	std::shared_ptr<Ship> ship(new Ship());
 	std::unique_ptr<Ai> ai(new Ai());
-
+/*
 	do { // Work until switch every case
 		systemClear();
 		help();
@@ -176,15 +176,22 @@ bool GameManager::startGame() {
 		break;
 		}
 	} while((playerMap->getVecShipOnMap()).size() != ship->getShipMaxCount());
-
+*/
 	//-----------AI-----------//
 	ai->setPosition(ship->getShip5(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), botMap->getVecMap2D());
-	ai->setPosition(ship->getShip4(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), botMap->getVecMap2D());
-	ai->setPosition(ship->getShip3(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), botMap->getVecMap2D());
-	ai->setPosition(ship->getShip2(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), botMap->getVecMap2D());
-	ai->setPosition(ship->getShip1(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), botMap->getVecMap2D());
+	botMap->setShip(ai->getBotShipPosition(), ai->getIsRotateVec(), ship->getShip5());
 
-	botMap->setShip(ai->getBotShipPosition(), ai->getIsRotateVec());
+	ai->setPosition(ship->getShip4(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), botMap->getVecMap2D());
+	botMap->setShip(ai->getBotShipPosition(), ai->getIsRotateVec(), ship->getShip4());
+
+	ai->setPosition(ship->getShip3(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), botMap->getVecMap2D());
+	botMap->setShip(ai->getBotShipPosition(), ai->getIsRotateVec(), ship->getShip3());
+
+	ai->setPosition(ship->getShip2(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), botMap->getVecMap2D());
+	botMap->setShip(ai->getBotShipPosition(), ai->getIsRotateVec(), ship->getShip2());
+
+	ai->setPosition(ship->getShip1(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), botMap->getVecMap2D());
+	botMap->setShip(ai->getBotShipPosition(), ai->getIsRotateVec(), ship->getShip1());
 
 	systemClear();
         help();
