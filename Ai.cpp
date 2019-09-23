@@ -1,8 +1,7 @@
 #include "Ai.h"
 
-#include <cstdlib>
-#include <time.h>
 #include <random>
+#include <algorithm>
 
 std::string Ai::difficultyLevel = "MEDIUM";
 std::string* Ai::getDifficultyLevel() { return &difficultyLevel; }
@@ -50,4 +49,46 @@ void Ai::setPosition(std::vector<int>* ship, unsigned int& widthMax, unsigned in
 				}
 			}			
 	} while(!isSet);
+}
+#include <iostream>
+std::vector<int>* Ai::randomHit(unsigned int widthMax, unsigned int heightMax) {
+	int positionX, positionY;
+	bool isUsedX, isUsedY;
+
+	do {
+		isUsedX = false;
+		isUsedY = false;
+
+		std::random_device rd;
+	        std::mt19937 gen(rd());
+
+	        std::uniform_int_distribution<> disX(0, widthMax - 1);
+	        std::uniform_int_distribution<> disY(0, heightMax - 1);
+
+		positionX = disX(gen);
+	        positionY = disY(gen);	
+		
+		if(!usedHitX.empty() && !usedHitY.empty()) {
+			for(int i = 0; i < usedHitX.size(); i++) {
+
+				isUsedX = false;
+				isUsedY = false;
+
+				if(usedHitX[i] == positionX && usedHitY[i] == positionY) {
+
+					isUsedX = true;
+					isUsedY = true;
+					break;
+				}
+			}
+		}
+	} while(isUsedX && isUsedY);
+
+	randHit.push_back(positionX);
+	randHit.push_back(positionY);
+
+	usedHitX.push_back(positionX);
+	usedHitY.push_back(positionY);
+
+	return &randHit;
 }
