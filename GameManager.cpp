@@ -331,24 +331,30 @@ void GameManager::playerRound(std::vector<std::vector<int>>* botMap, unsigned in
 	char inputLetter;
 	int inputLetterNumber;
 	int inputNumber;	
+	bool hit;
 
 	do {
-		cout << "Select letter: ";
-		cin >> inputLetter;
-	} while(isCorrectLetter(inputLetter, widthMax));
-
-	cout << heightMax;
+		hit = false;
+		do {
+			cout << "Select letter: ";
+			cin >> inputLetter;
+		} while(isCorrectLetter(inputLetter, widthMax));
 		
-	do {
-		cout << "Select number: ";
-		cin >> inputNumber;
-	} while(inputNumber < 1 || inputNumber > heightMax);
+		do {
+			cout << "Select number: ";
+			cin >> inputNumber;
+		} while(inputNumber < 1 || inputNumber > heightMax);
 
-	if(inputLetter <= 90) //convert capital letter to map's area
-		inputLetterNumber = (int)inputLetter - 65; 
-	else // convert miniscule letter to map's area
-		inputLetterNumber = (int)inputLetter - 97;
+		if(inputLetter <= 90) //convert capital letter to map's area
+			inputLetterNumber = (int)inputLetter - 65; 
+		else // convert miniscule letter to map's area
+			inputLetterNumber = (int)inputLetter - 97;
 
+		if((*botMap)[inputLetterNumber][inputNumber - 1] != 1 && (*botMap)[inputLetterNumber][inputNumber - 1] != 3) { // 1 = miss, 3 = hit
+			(*botMap)[inputLetterNumber][inputNumber - 1] += 1;
+			hit = true;
+		}
+	} while(hit != true);
 }
 
 void GameManager::botRound(std::vector<std::vector<int>>* vecMap2D, std::vector<int>* randHit) {
