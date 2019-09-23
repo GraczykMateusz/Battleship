@@ -42,7 +42,7 @@ bool GameManager::startGame() {
 	std::unique_ptr<PlayerMap> playerMap(new PlayerMap());
 	std::shared_ptr<Ship> ship(new Ship());
 	std::unique_ptr<Ai> ai(new Ai());
-/*
+
 	do { // Work until switch every case
 		systemClear();
 		help();
@@ -177,7 +177,7 @@ bool GameManager::startGame() {
 		break;
 		}
 	} while((playerMap->getVecShipOnMap()).size() != ship->getShipMaxCount());
-*/
+
 	//-----------AI-----------//
 	ai->setPosition(ship->getShip5(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight(), botMap->getVecMap2D());
 	botMap->setShip(ai->getBotShipPosition(), ai->getIsRotateVec(), ship->getShip5());
@@ -207,27 +207,34 @@ bool GameManager::startGame() {
  
 	        botMap->showMapName();
 	        botMap->showMap();
-		
+
 		if(playerStart) {
-			playerRound();
+			//playerRound();
 			playerStart = false;
 		}
 		else {
-			if(playerWin != true) {
-				botRound(playerMap->getVecMap2D(), ai->randomHit(*Map::getMapSizeWidth(), *Map::getMapSizeHeight()));
-				checkWin(botMap->getVecMap2D(), playerMap->getVecMap2D(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
-			}
-			if(botWin != true) {	
-				playerRound();
-				checkWin(botMap->getVecMap2D(), playerMap->getVecMap2D(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
-			}
+			botRound(playerMap->getVecMap2D(), ai->randomHit(*Map::getMapSizeWidth(), *Map::getMapSizeHeight()));
+			playerStart = true;
 		}
-	} while(!playerWin || !botWin);
+		checkWin(botMap->getVecMap2D(), playerMap->getVecMap2D(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
+
+	} while(!playerWin && !botWin);
+
+	systemClear();
+        help();
+ 
+        playerMap->showMapName();
+        playerMap->showMap();
+
+        botMap->showMapName();
+        botMap->showMap();
 
 	if(playerWin)
 		playerIsWinner();
 	else
 		botIsWinner();
+
+	char wait; cin >> wait;
 }
 
 void GameManager::help() {
@@ -331,22 +338,26 @@ void GameManager::botRound(std::vector<std::vector<int>>* vecMap2D, std::vector<
 }
 
 void GameManager::checkWin(std::vector<std::vector<int>>* botMap , std::vector<std::vector<int>>* playerMap, unsigned int widthMax, unsigned int heightMax) {
-	int botCounter, playerCounter;
+	int botCounter = 0, playerCounter = 0;
 
 	for(int i = 0; i < heightMax; i++) { //Vertical
                 for(int j = 0; j < widthMax; j++) { //Horizontal
-			if((*botMap)[i][j] == 3) //hit
-				botCounter++;	
-			if((*playerMap)[i][j] == 3)
+			if((*botMap)[j][i] == 3) //hit
 				playerCounter++;
+			if((*playerMap)[j][i] == 3) { 
+				botCounter++;
+				cout << j << i << endl;
 			}
+		}
 	}
-        if(playerCounter == 15) // max ships area
+       
+	if(playerCounter == 15) // max ships area
 		playerWin = true;
 	if(botCounter == 15)
 		botWin = true;
 
-	botCounter = 0;
-	playerCounter = 0;
+	cout << botCounter;
+	cout << playerCounter;
+	int x; cin >> x;
 }
 /*------GAME-MANAGER-END--------*/
