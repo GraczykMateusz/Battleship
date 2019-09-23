@@ -209,7 +209,7 @@ bool GameManager::startGame() {
 	        botMap->showMap();
 
 		if(playerStart) {
-			//playerRound();
+			playerRound(botMap->getVecMap2D(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
 			playerStart = false;
 		}
 		else {
@@ -327,9 +327,28 @@ void GameManager::playerIsWinner() {
 	cout << "The winner is: Player!";
 }
 
-void GameManager::playerRound() {
-	cout << "Select: ";
-	int z; cin >> z;	
+void GameManager::playerRound(std::vector<std::vector<int>>* botMap, unsigned int& widthMax, unsigned int& heightMax) {
+	char inputLetter;
+	int inputLetterNumber;
+	int inputNumber;	
+
+	do {
+		cout << "Select letter: ";
+		cin >> inputLetter;
+	} while(isCorrectLetter(inputLetter, widthMax));
+
+	cout << heightMax;
+		
+	do {
+		cout << "Select number: ";
+		cin >> inputNumber;
+	} while(inputNumber < 1 || inputNumber > heightMax);
+
+	if(inputLetter <= 90) //convert capital letter to map's area
+		inputLetterNumber = (int)inputLetter - 65; 
+	else // convert miniscule letter to map's area
+		inputLetterNumber = (int)inputLetter - 97;
+
 }
 
 void GameManager::botRound(std::vector<std::vector<int>>* vecMap2D, std::vector<int>* randHit) {
@@ -337,7 +356,7 @@ void GameManager::botRound(std::vector<std::vector<int>>* vecMap2D, std::vector<
 	(*randHit).clear();
 }
 
-void GameManager::checkWin(std::vector<std::vector<int>>* botMap , std::vector<std::vector<int>>* playerMap, unsigned int widthMax, unsigned int heightMax) {
+void GameManager::checkWin(std::vector<std::vector<int>>* botMap , std::vector<std::vector<int>>* playerMap, unsigned int& widthMax, unsigned int& heightMax) {
 	int botCounter = 0, playerCounter = 0;
 
 	for(int i = 0; i < heightMax; i++) { //Vertical
@@ -346,7 +365,6 @@ void GameManager::checkWin(std::vector<std::vector<int>>* botMap , std::vector<s
 				playerCounter++;
 			if((*playerMap)[j][i] == 3) { 
 				botCounter++;
-				cout << j << i << endl;
 			}
 		}
 	}
@@ -355,9 +373,12 @@ void GameManager::checkWin(std::vector<std::vector<int>>* botMap , std::vector<s
 		playerWin = true;
 	if(botCounter == 15)
 		botWin = true;
+}
 
-	cout << botCounter;
-	cout << playerCounter;
-	int x; cin >> x;
+bool GameManager::isCorrectLetter(char& inputLetter, unsigned int& widthMax) {
+	if((inputLetter >= 'A' && inputLetter <= (char)(widthMax) + 64) || (inputLetter >= 'a' && inputLetter <= (char)(widthMax + 96)))
+                return false;
+        else
+                return true;
 }
 /*------GAME-MANAGER-END--------*/
