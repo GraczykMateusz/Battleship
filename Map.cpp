@@ -6,7 +6,7 @@
 using std::cout;
 using std::endl;
 
-unsigned int Map::mapSizeHeight = 5;
+unsigned int Map::mapSizeHeight = 6;
 unsigned int Map::mapSizeWidth = 10;
 unsigned int* Map::getMapSizeHeight() { return &mapSizeHeight; }
 unsigned int* Map::getMapSizeWidth() { return &mapSizeWidth; }
@@ -47,14 +47,14 @@ void Map::showMap() {
 					cout << i + 1 << '|';
 			}
 			/*Position*/
-			if(vecMap2D[j][i] == -1) //Miss
-				cout << 'o';		
 			if(vecMap2D[j][i] == 0) //Free 
 				cout << ' ';
-			if(vecMap2D[j][i] == 1) //Hit
-				cout << 'X';
+			if(vecMap2D[j][i] == 1) //Miss
+				cout << 'o';
 			if(vecMap2D[j][i] == 2) //Ship
 				cout << "\u25A0";
+			if(vecMap2D[j][i] == 3) //Hit
+                                cout << 'X';
 			if(vecMap2D[j][i] == 4) //Ship on ship
 				cout << '@';
 					
