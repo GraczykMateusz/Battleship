@@ -30,6 +30,8 @@ private:
 	void playerRound(std::vector<std::vector<int>>* botMap, unsigned int& widthMax, unsigned int& heightMax);
 	void botRound(std::vector<std::vector<int>>* vecMap2D, std::vector<int>* randHit);
 
+	short playerHitCounter = 0;
+	short botHitCounter = 0;
 	void checkWin(std::vector<std::vector<int>>* botMap , std::vector<std::vector<int>>* playerMap, unsigned int& widthMax, unsigned int& heightMax);
 	bool isCorrectLetter(char& inputLetter, unsigned int& widthMax);
 
