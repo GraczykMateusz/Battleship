@@ -209,12 +209,12 @@ bool GameManager::startGame() {
 	        botMap->showMap();
 
 		if(playerStart) {
-			playerRound(botMap->getVecMap2D(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
 			playerStart = false;
+			playerRound(botMap->getVecMap2D(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
 		}
 		else {
-			botRound(playerMap->getVecMap2D(), ai->randomHit(*Map::getMapSizeWidth(), *Map::getMapSizeHeight()));
 			playerStart = true;
+			botRound(playerMap->getVecMap2D(), ai->randomHit(*Map::getMapSizeWidth(), *Map::getMapSizeHeight()));
 		}
 		checkWin(botMap->getVecMap2D(), playerMap->getVecMap2D(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
 
@@ -333,6 +333,9 @@ void GameManager::playerRound(std::vector<std::vector<int>>* botMap, unsigned in
 	int inputNumber;	
 	bool hit;
 
+	cout << "Friendly dead ships: " << botHitCounter << "/15" << endl;
+	cout << "Enemy dead ships: " << playerHitCounter << "/15" << endl << endl;
+
 	do {
 		hit = false;
 		do {
@@ -354,16 +357,28 @@ void GameManager::playerRound(std::vector<std::vector<int>>* botMap, unsigned in
 			(*botMap)[inputLetterNumber][inputNumber - 1] += 1;
 			hit = true;
 		}
+		
+		if((*botMap)[inputLetterNumber][inputNumber - 1] == 3) {
+			playerHitCounter++;
+			playerStart = true;
+		}
 	} while(hit != true);
 }
 
 void GameManager::botRound(std::vector<std::vector<int>>* vecMap2D, std::vector<int>* randHit) {
 	(*vecMap2D)[(*randHit)[0]][(*randHit)[1]] += 1;
 	(*randHit).clear();
+
+	if((*vecMap2D)[(*randHit)[0]][(*randHit)[1]] == 3) {
+		botHitCounter++;
+		playerStart = false;
+	}
 }
 
 void GameManager::checkWin(std::vector<std::vector<int>>* botMap , std::vector<std::vector<int>>* playerMap, unsigned int& widthMax, unsigned int& heightMax) {
 	int botCounter = 0, playerCounter = 0;
+	playerWin = false;
+	botWin = false;
 
 	for(int i = 0; i < heightMax; i++) { //Vertical
                 for(int j = 0; j < widthMax; j++) { //Horizontal
