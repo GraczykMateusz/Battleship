@@ -43,6 +43,9 @@ bool GameManager::startGame() {
 	std::shared_ptr<Ship> ship(new Ship());
 	std::unique_ptr<Ai> ai(new Ai());
 
+	playerHitCounter = 0;
+	botHitCounter = 0;
+
 	do { // Work until switch every case
 		systemClear();
 		help();
@@ -214,7 +217,7 @@ bool GameManager::startGame() {
 		}
 		else {
 			playerStart = true;
-			botRound(playerMap->getVecMap2D(), ai->randomHit(*Map::getMapSizeWidth(), *Map::getMapSizeHeight()));
+			botRound(playerMap->getVecMap2D(), ai->randomHit(playerMap->getVecMap2D(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight()));
 		}
 		checkWin(botMap->getVecMap2D(), playerMap->getVecMap2D(), *Map::getMapSizeWidth(), *Map::getMapSizeHeight());
 
