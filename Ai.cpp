@@ -50,10 +50,13 @@ void Ai::setPosition(std::vector<int>* ship, unsigned int& widthMax, unsigned in
 			}			
 	} while(!isSet);
 }
-#include <iostream>
-std::vector<int>* Ai::randomHit(unsigned int widthMax, unsigned int heightMax) {
+
+std::vector<int>* Ai::randomHit(std::vector<std::vector<int>>* playerMap, unsigned int& widthMax, unsigned int& heightMax) {
 	int positionX, positionY;
 	bool isUsedX, isUsedY;
+
+	if(difficultyLevel != "EASY" && changeHits)
+		upgradeHits(playerMap, widthMax, heightMax);
 
 	do {
 		isUsedX = false;
@@ -91,4 +94,129 @@ std::vector<int>* Ai::randomHit(unsigned int widthMax, unsigned int heightMax) {
 	usedHitY.push_back(positionY);
 
 	return &randHit;
+}
+
+void Ai::upgradeHits(std::vector<std::vector<int>>* playerMap, unsigned int& widthMax, unsigned int& heightMax) {
+	int area;
+	int freeAreaCount;
+	const int allShipsArea = 15;
+
+	area = widthMax * heightMax;
+	freeAreaCount = area - allShipsArea;
+
+	for(int i = 0; i < heightMax; i++) {
+		for(int j = 0; j < widthMax; j++) {
+			if((*playerMap)[j][i] == 0) { // free area
+				freeAreaX.push_back(j);
+				freeAreaY.push_back(i);	
+			}
+		}
+	}
+
+	if(area < 50) {
+		if(difficultyLevel == "MEDIUM") {
+			randomKnownFreeArea(10);
+		}
+		else { //hard	
+			randomKnownFreeArea(15);
+		}
+	}
+	else if(area >= 50 && area < 75) {
+		if(difficultyLevel == "MEDIUM") {
+			randomKnownFreeArea(20);
+		}
+		else {
+			randomKnownFreeArea(25);
+		}
+	}
+	else if(area >= 75 && area < 100) {
+		if(difficultyLevel == "MEDIUM") {
+                        randomKnownFreeArea(30);
+                }
+                else {
+                        randomKnownFreeArea(35);
+                }
+	}
+	else if(area >= 100 && area < 125) {
+		if(difficultyLevel == "MEDIUM") {
+                        randomKnownFreeArea(40);
+                }
+                else {
+                        randomKnownFreeArea(45);
+                }
+	}
+	else if(area >= 125 && area < 150) {
+		if(difficultyLevel == "MEDIUM") {
+                        randomKnownFreeArea(50);
+                }
+                else {
+                        randomKnownFreeArea(55);
+                }
+	}
+	else if(area >= 150 && area < 175) {
+		if(difficultyLevel == "MEDIUM") {
+			randomKnownFreeArea(60);
+		}
+		else {
+			randomKnownFreeArea(65);
+		}
+	}
+	else if(area >= 175 && area < 200) {
+		if(difficultyLevel == "MEDIUM") {
+                        randomKnownFreeArea(70);
+                }
+                else {
+                        randomKnownFreeArea(75);
+                }
+	}
+	else if(area >= 200 && area <= 225) {
+		if(difficultyLevel == "MEDIUM") {
+			randomKnownFreeArea(80);
+		}
+		else {
+			randomKnownFreeArea(85);
+		}
+	}
+		
+	changeHits = false;
+}
+
+void Ai::randomKnownFreeArea(int knownArea) {
+	int positionX, positionY;
+	bool isUsedX, isUsedY;
+	
+	for(int i = 0; i < knownArea; i++) {
+	        do {
+	                isUsedX = false;
+	                isUsedY = false;
+ 
+	                std::random_device rd;
+	                std::mt19937 gen(rd());
+
+	                std::uniform_int_distribution<> dis(0, freeAreaX.size() - 1);
+
+			auto draw = dis(gen);
+
+	                positionX = freeAreaX[draw];
+	                positionY = freeAreaY[draw];
+
+	                if(!usedHitX.empty() && !usedHitY.empty()) {
+	                        for(int i = 0; i < usedHitX.size(); i++) {
+
+	                                isUsedX = false;
+	                                isUsedY = false;
+ 
+	                                if(usedHitX[i] == positionX && usedHitY[i] == positionY) {
+
+	                                        isUsedX = true;
+	                                        isUsedY = true;
+	                                        break;
+	                                }
+	                        }
+	                }
+	        } while(isUsedX && isUsedY);
+ 
+	         usedHitX.push_back(positionX);
+	         usedHitY.push_back(positionY);
+	}
 }
