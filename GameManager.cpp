@@ -237,7 +237,10 @@ bool GameManager::startGame() {
 	else
 		botIsWinner();
 
-	char wait; cin >> wait;
+	do {
+		cout << "0. Return to MENU" << endl;
+		playerSelect();
+	} while(select != '0');
 }
 
 void GameManager::help() {
@@ -323,11 +326,11 @@ void GameManager::whoStartGame() {
 }
 
 void GameManager::botIsWinner() {
-	cout << "The winner is: BOT!";	
+	cout << "The winner is: BOT!" << endl;	
 }
 
 void GameManager::playerIsWinner() {
-	cout << "The winner is: Player!";
+	cout << "The winner is: Player!" << endl;
 }
 
 void GameManager::playerRound(std::vector<std::vector<int>>* botMap, unsigned int& widthMax, unsigned int& heightMax) {
@@ -393,8 +396,9 @@ void GameManager::checkWin(std::vector<std::vector<int>>* botMap , std::vector<s
 		}
 	}
        
-	if(playerCounter == 15) // max ships area
+	if(playerCounter == 15) // max ships area 
 		playerWin = true;
+	
 	if(botCounter == 15)
 		botWin = true;
 }
