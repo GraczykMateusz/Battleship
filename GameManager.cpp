@@ -364,7 +364,7 @@ void GameManager::playerRound(std::vector<std::vector<int>>* botMap, unsigned in
 			hit = true;
 		}
 		
-		if((*botMap)[inputLetterNumber][inputNumber - 1] == 3) {
+		if((*botMap)[inputLetterNumber][inputNumber - 1] == 3 && hit == true) {
 			playerHitCounter++;
 			playerStart = true;
 		}
@@ -373,12 +373,12 @@ void GameManager::playerRound(std::vector<std::vector<int>>* botMap, unsigned in
 
 void GameManager::botRound(std::vector<std::vector<int>>* vecMap2D, std::vector<int>* randHit) {
 	(*vecMap2D)[(*randHit)[0]][(*randHit)[1]] += 1;
-	(*randHit).clear();
 
 	if((*vecMap2D)[(*randHit)[0]][(*randHit)[1]] == 3) {
 		botHitCounter++;
 		playerStart = false;
 	}
+	(*randHit).clear();
 }
 
 void GameManager::checkWin(std::vector<std::vector<int>>* botMap , std::vector<std::vector<int>>* playerMap, unsigned int& widthMax, unsigned int& heightMax) {
