@@ -2,7 +2,7 @@
 #include "systemClear.h"
 
 void systemClear() {
-#ifdef WINDOWS
+#ifdef _WIN32
 	std::system("cls");
 #else
 	std::system("clear");
