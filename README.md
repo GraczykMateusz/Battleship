@@ -3,12 +3,12 @@ Hello everyone! This is my first bigger project in C++. I have used C++11 standa
 
 *MENU:
 
-![1](https://user-images.githubusercontent.com/43554417/65710087-90298d00-e092-11e9-8fb9-dde65c098b69.png)
+![](menu.png)
 
 *SETTINGS
 
-![2](https://user-images.githubusercontent.com/43554417/65713805-45ac0e80-e09a-11e9-9bce-b73055c9ae86.png)
+![](settings.png)
 
 *GAMEPLAY
 
-![3](https://user-images.githubusercontent.com/43554417/65713832-5197d080-e09a-11e9-9f01-2758a5145c7c.png)
+![](gameplay.png)
