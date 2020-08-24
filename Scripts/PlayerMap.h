@@ -1,3 +1,6 @@
+#ifndef PLAYER_MAP_H
+#define PLAYER_MAP_H
+
 #include <vector>
 
 #include "Map.h"
@@ -18,3 +21,5 @@ public:
 private:
 	std::vector<short> vecShipOnMap;
 };
+
+#endif

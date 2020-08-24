@@ -1,3 +1,6 @@
+#ifndef SHIP_H
+#define SHIP_H
+
 #include <vector>
 
 class Ship {
@@ -69,3 +72,5 @@ private:
 	std::vector<int> ship4{std::vector<int>(4, 2)}; 
 	std::vector<int> ship5{std::vector<int>(5, 2)}; 
 };
+
+#endif

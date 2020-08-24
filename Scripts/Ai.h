@@ -1,3 +1,6 @@
+#ifndef AI_H
+#define AI_H
+
 #include <string>
 #include <vector>
 
@@ -30,3 +33,5 @@ private:
 	std::vector<int> usedHitX;
 	std::vector<int> usedHitY;
 };
+
+#endif

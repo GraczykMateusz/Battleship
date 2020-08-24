@@ -1,3 +1,6 @@
+#ifndef BOT_MAP_H
+#define BOT_MAP_H
+
 #include "Map.h"
 #include <vector>
 
@@ -11,3 +14,5 @@ public:
 	void setShip(std::vector<int>* botShipPosition, std::vector<int>* isRotateVec, std::vector<int>* ship);
 private:
 };
+
+#endif

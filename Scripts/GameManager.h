@@ -1,3 +1,6 @@
+#ifndef GAME_MANAGER_H
+#define GAME_MANAGER_H
+
 #include <string>
 
 class Map;
@@ -53,3 +56,5 @@ private:
 	void help();
 	bool exit;
 };
+
+#endif
