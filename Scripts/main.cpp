@@ -6,7 +6,7 @@
 #include "Ai.h"
 
 int main() {
-	std::unique_ptr<GameManager> gameManager(new GameManager());
+	std::unique_ptr<GameManager> gameManager = std::make_unique<GameManager>();
 	do {
 		systemClear();
 		switch (gameManager->menu()) {

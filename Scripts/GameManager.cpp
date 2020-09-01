@@ -38,10 +38,10 @@ char GameManager::playerSelect() {
 
 /*------------START--------------*/
 bool GameManager::startGame() {
-	std::unique_ptr<BotMap> botMap(new BotMap());
-	std::unique_ptr<PlayerMap> playerMap(new PlayerMap());
-	std::shared_ptr<Ship> ship(new Ship());
-	std::unique_ptr<Ai> ai(new Ai());
+	std::unique_ptr<BotMap> botMap = std::make_unique<BotMap>();
+	std::unique_ptr<PlayerMap> playerMap = std::make_unique<PlayerMap>();
+	std::shared_ptr<Ship> ship = std::make_shared<Ship>();
+	std::unique_ptr<Ai> ai = std::make_unique<Ai>();
 
 	playerHitCounter = 0;
 	botHitCounter = 0;
