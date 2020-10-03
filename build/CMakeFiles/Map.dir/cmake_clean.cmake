@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Map.dir/Scripts/Map.cpp.o"
+  "CMakeFiles/Map.dir/src/Map.cpp.o"
   "libMap.a"
   "libMap.pdb"
 )

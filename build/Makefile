@@ -214,227 +214,227 @@ Battleship/fast:
 	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/build
 .PHONY : Battleship/fast
 
-Scripts/Ai.o: Scripts/Ai.cpp.o
+src/Ai.o: src/Ai.cpp.o
 
-.PHONY : Scripts/Ai.o
-
-# target to build an object file
-Scripts/Ai.cpp.o:
-	$(MAKE) -f CMakeFiles/Ai.dir/build.make CMakeFiles/Ai.dir/Scripts/Ai.cpp.o
-	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/Scripts/Ai.cpp.o
-.PHONY : Scripts/Ai.cpp.o
-
-Scripts/Ai.i: Scripts/Ai.cpp.i
-
-.PHONY : Scripts/Ai.i
-
-# target to preprocess a source file
-Scripts/Ai.cpp.i:
-	$(MAKE) -f CMakeFiles/Ai.dir/build.make CMakeFiles/Ai.dir/Scripts/Ai.cpp.i
-	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/Scripts/Ai.cpp.i
-.PHONY : Scripts/Ai.cpp.i
-
-Scripts/Ai.s: Scripts/Ai.cpp.s
-
-.PHONY : Scripts/Ai.s
-
-# target to generate assembly for a file
-Scripts/Ai.cpp.s:
-	$(MAKE) -f CMakeFiles/Ai.dir/build.make CMakeFiles/Ai.dir/Scripts/Ai.cpp.s
-	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/Scripts/Ai.cpp.s
-.PHONY : Scripts/Ai.cpp.s
-
-Scripts/BotMap.o: Scripts/BotMap.cpp.o
-
-.PHONY : Scripts/BotMap.o
+.PHONY : src/Ai.o
 
 # target to build an object file
-Scripts/BotMap.cpp.o:
-	$(MAKE) -f CMakeFiles/BotMap.dir/build.make CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.o
-	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.o
-.PHONY : Scripts/BotMap.cpp.o
+src/Ai.cpp.o:
+	$(MAKE) -f CMakeFiles/Ai.dir/build.make CMakeFiles/Ai.dir/src/Ai.cpp.o
+	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/src/Ai.cpp.o
+.PHONY : src/Ai.cpp.o
 
-Scripts/BotMap.i: Scripts/BotMap.cpp.i
+src/Ai.i: src/Ai.cpp.i
 
-.PHONY : Scripts/BotMap.i
+.PHONY : src/Ai.i
 
 # target to preprocess a source file
-Scripts/BotMap.cpp.i:
-	$(MAKE) -f CMakeFiles/BotMap.dir/build.make CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.i
-	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.i
-.PHONY : Scripts/BotMap.cpp.i
+src/Ai.cpp.i:
+	$(MAKE) -f CMakeFiles/Ai.dir/build.make CMakeFiles/Ai.dir/src/Ai.cpp.i
+	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/src/Ai.cpp.i
+.PHONY : src/Ai.cpp.i
 
-Scripts/BotMap.s: Scripts/BotMap.cpp.s
+src/Ai.s: src/Ai.cpp.s
 
-.PHONY : Scripts/BotMap.s
+.PHONY : src/Ai.s
 
 # target to generate assembly for a file
-Scripts/BotMap.cpp.s:
-	$(MAKE) -f CMakeFiles/BotMap.dir/build.make CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.s
-	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.s
-.PHONY : Scripts/BotMap.cpp.s
+src/Ai.cpp.s:
+	$(MAKE) -f CMakeFiles/Ai.dir/build.make CMakeFiles/Ai.dir/src/Ai.cpp.s
+	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/src/Ai.cpp.s
+.PHONY : src/Ai.cpp.s
 
-Scripts/GameManager.o: Scripts/GameManager.cpp.o
+src/BotMap.o: src/BotMap.cpp.o
 
-.PHONY : Scripts/GameManager.o
+.PHONY : src/BotMap.o
 
 # target to build an object file
-Scripts/GameManager.cpp.o:
-	$(MAKE) -f CMakeFiles/GameManager.dir/build.make CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.o
-.PHONY : Scripts/GameManager.cpp.o
+src/BotMap.cpp.o:
+	$(MAKE) -f CMakeFiles/BotMap.dir/build.make CMakeFiles/BotMap.dir/src/BotMap.cpp.o
+	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/src/BotMap.cpp.o
+.PHONY : src/BotMap.cpp.o
 
-Scripts/GameManager.i: Scripts/GameManager.cpp.i
+src/BotMap.i: src/BotMap.cpp.i
 
-.PHONY : Scripts/GameManager.i
+.PHONY : src/BotMap.i
 
 # target to preprocess a source file
-Scripts/GameManager.cpp.i:
-	$(MAKE) -f CMakeFiles/GameManager.dir/build.make CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.i
-.PHONY : Scripts/GameManager.cpp.i
+src/BotMap.cpp.i:
+	$(MAKE) -f CMakeFiles/BotMap.dir/build.make CMakeFiles/BotMap.dir/src/BotMap.cpp.i
+	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/src/BotMap.cpp.i
+.PHONY : src/BotMap.cpp.i
 
-Scripts/GameManager.s: Scripts/GameManager.cpp.s
+src/BotMap.s: src/BotMap.cpp.s
 
-.PHONY : Scripts/GameManager.s
+.PHONY : src/BotMap.s
 
 # target to generate assembly for a file
-Scripts/GameManager.cpp.s:
-	$(MAKE) -f CMakeFiles/GameManager.dir/build.make CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.s
-.PHONY : Scripts/GameManager.cpp.s
+src/BotMap.cpp.s:
+	$(MAKE) -f CMakeFiles/BotMap.dir/build.make CMakeFiles/BotMap.dir/src/BotMap.cpp.s
+	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/src/BotMap.cpp.s
+.PHONY : src/BotMap.cpp.s
 
-Scripts/Map.o: Scripts/Map.cpp.o
+src/GameManager.o: src/GameManager.cpp.o
 
-.PHONY : Scripts/Map.o
+.PHONY : src/GameManager.o
 
 # target to build an object file
-Scripts/Map.cpp.o:
-	$(MAKE) -f CMakeFiles/Map.dir/build.make CMakeFiles/Map.dir/Scripts/Map.cpp.o
-.PHONY : Scripts/Map.cpp.o
+src/GameManager.cpp.o:
+	$(MAKE) -f CMakeFiles/GameManager.dir/build.make CMakeFiles/GameManager.dir/src/GameManager.cpp.o
+.PHONY : src/GameManager.cpp.o
 
-Scripts/Map.i: Scripts/Map.cpp.i
+src/GameManager.i: src/GameManager.cpp.i
 
-.PHONY : Scripts/Map.i
+.PHONY : src/GameManager.i
 
 # target to preprocess a source file
-Scripts/Map.cpp.i:
-	$(MAKE) -f CMakeFiles/Map.dir/build.make CMakeFiles/Map.dir/Scripts/Map.cpp.i
-.PHONY : Scripts/Map.cpp.i
+src/GameManager.cpp.i:
+	$(MAKE) -f CMakeFiles/GameManager.dir/build.make CMakeFiles/GameManager.dir/src/GameManager.cpp.i
+.PHONY : src/GameManager.cpp.i
 
-Scripts/Map.s: Scripts/Map.cpp.s
+src/GameManager.s: src/GameManager.cpp.s
 
-.PHONY : Scripts/Map.s
+.PHONY : src/GameManager.s
 
 # target to generate assembly for a file
-Scripts/Map.cpp.s:
-	$(MAKE) -f CMakeFiles/Map.dir/build.make CMakeFiles/Map.dir/Scripts/Map.cpp.s
-.PHONY : Scripts/Map.cpp.s
+src/GameManager.cpp.s:
+	$(MAKE) -f CMakeFiles/GameManager.dir/build.make CMakeFiles/GameManager.dir/src/GameManager.cpp.s
+.PHONY : src/GameManager.cpp.s
 
-Scripts/PlayerMap.o: Scripts/PlayerMap.cpp.o
+src/Map.o: src/Map.cpp.o
 
-.PHONY : Scripts/PlayerMap.o
+.PHONY : src/Map.o
 
 # target to build an object file
-Scripts/PlayerMap.cpp.o:
-	$(MAKE) -f CMakeFiles/PlayerMap.dir/build.make CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.o
-.PHONY : Scripts/PlayerMap.cpp.o
+src/Map.cpp.o:
+	$(MAKE) -f CMakeFiles/Map.dir/build.make CMakeFiles/Map.dir/src/Map.cpp.o
+.PHONY : src/Map.cpp.o
 
-Scripts/PlayerMap.i: Scripts/PlayerMap.cpp.i
+src/Map.i: src/Map.cpp.i
 
-.PHONY : Scripts/PlayerMap.i
+.PHONY : src/Map.i
 
 # target to preprocess a source file
-Scripts/PlayerMap.cpp.i:
-	$(MAKE) -f CMakeFiles/PlayerMap.dir/build.make CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.i
-.PHONY : Scripts/PlayerMap.cpp.i
+src/Map.cpp.i:
+	$(MAKE) -f CMakeFiles/Map.dir/build.make CMakeFiles/Map.dir/src/Map.cpp.i
+.PHONY : src/Map.cpp.i
 
-Scripts/PlayerMap.s: Scripts/PlayerMap.cpp.s
+src/Map.s: src/Map.cpp.s
 
-.PHONY : Scripts/PlayerMap.s
+.PHONY : src/Map.s
 
 # target to generate assembly for a file
-Scripts/PlayerMap.cpp.s:
-	$(MAKE) -f CMakeFiles/PlayerMap.dir/build.make CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.s
-.PHONY : Scripts/PlayerMap.cpp.s
+src/Map.cpp.s:
+	$(MAKE) -f CMakeFiles/Map.dir/build.make CMakeFiles/Map.dir/src/Map.cpp.s
+.PHONY : src/Map.cpp.s
 
-Scripts/Ship.o: Scripts/Ship.cpp.o
+src/PlayerMap.o: src/PlayerMap.cpp.o
 
-.PHONY : Scripts/Ship.o
+.PHONY : src/PlayerMap.o
 
 # target to build an object file
-Scripts/Ship.cpp.o:
-	$(MAKE) -f CMakeFiles/Ship.dir/build.make CMakeFiles/Ship.dir/Scripts/Ship.cpp.o
-.PHONY : Scripts/Ship.cpp.o
+src/PlayerMap.cpp.o:
+	$(MAKE) -f CMakeFiles/PlayerMap.dir/build.make CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.o
+.PHONY : src/PlayerMap.cpp.o
 
-Scripts/Ship.i: Scripts/Ship.cpp.i
+src/PlayerMap.i: src/PlayerMap.cpp.i
 
-.PHONY : Scripts/Ship.i
+.PHONY : src/PlayerMap.i
 
 # target to preprocess a source file
-Scripts/Ship.cpp.i:
-	$(MAKE) -f CMakeFiles/Ship.dir/build.make CMakeFiles/Ship.dir/Scripts/Ship.cpp.i
-.PHONY : Scripts/Ship.cpp.i
+src/PlayerMap.cpp.i:
+	$(MAKE) -f CMakeFiles/PlayerMap.dir/build.make CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.i
+.PHONY : src/PlayerMap.cpp.i
 
-Scripts/Ship.s: Scripts/Ship.cpp.s
+src/PlayerMap.s: src/PlayerMap.cpp.s
 
-.PHONY : Scripts/Ship.s
+.PHONY : src/PlayerMap.s
 
 # target to generate assembly for a file
-Scripts/Ship.cpp.s:
-	$(MAKE) -f CMakeFiles/Ship.dir/build.make CMakeFiles/Ship.dir/Scripts/Ship.cpp.s
-.PHONY : Scripts/Ship.cpp.s
+src/PlayerMap.cpp.s:
+	$(MAKE) -f CMakeFiles/PlayerMap.dir/build.make CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.s
+.PHONY : src/PlayerMap.cpp.s
 
-Scripts/main.o: Scripts/main.cpp.o
+src/Ship.o: src/Ship.cpp.o
 
-.PHONY : Scripts/main.o
+.PHONY : src/Ship.o
 
 # target to build an object file
-Scripts/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/Scripts/main.cpp.o
-.PHONY : Scripts/main.cpp.o
+src/Ship.cpp.o:
+	$(MAKE) -f CMakeFiles/Ship.dir/build.make CMakeFiles/Ship.dir/src/Ship.cpp.o
+.PHONY : src/Ship.cpp.o
 
-Scripts/main.i: Scripts/main.cpp.i
+src/Ship.i: src/Ship.cpp.i
 
-.PHONY : Scripts/main.i
+.PHONY : src/Ship.i
 
 # target to preprocess a source file
-Scripts/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/Scripts/main.cpp.i
-.PHONY : Scripts/main.cpp.i
+src/Ship.cpp.i:
+	$(MAKE) -f CMakeFiles/Ship.dir/build.make CMakeFiles/Ship.dir/src/Ship.cpp.i
+.PHONY : src/Ship.cpp.i
 
-Scripts/main.s: Scripts/main.cpp.s
+src/Ship.s: src/Ship.cpp.s
 
-.PHONY : Scripts/main.s
+.PHONY : src/Ship.s
 
 # target to generate assembly for a file
-Scripts/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/Scripts/main.cpp.s
-.PHONY : Scripts/main.cpp.s
+src/Ship.cpp.s:
+	$(MAKE) -f CMakeFiles/Ship.dir/build.make CMakeFiles/Ship.dir/src/Ship.cpp.s
+.PHONY : src/Ship.cpp.s
 
-Scripts/systemClear.o: Scripts/systemClear.cpp.o
+src/main.o: src/main.cpp.o
 
-.PHONY : Scripts/systemClear.o
+.PHONY : src/main.o
 
 # target to build an object file
-Scripts/systemClear.cpp.o:
-	$(MAKE) -f CMakeFiles/systemClear.dir/build.make CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.o
-.PHONY : Scripts/systemClear.cpp.o
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-Scripts/systemClear.i: Scripts/systemClear.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : Scripts/systemClear.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-Scripts/systemClear.cpp.i:
-	$(MAKE) -f CMakeFiles/systemClear.dir/build.make CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.i
-.PHONY : Scripts/systemClear.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-Scripts/systemClear.s: Scripts/systemClear.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : Scripts/systemClear.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-Scripts/systemClear.cpp.s:
-	$(MAKE) -f CMakeFiles/systemClear.dir/build.make CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.s
-.PHONY : Scripts/systemClear.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/Battleship.dir/build.make CMakeFiles/Battleship.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/systemClear.o: src/systemClear.cpp.o
+
+.PHONY : src/systemClear.o
+
+# target to build an object file
+src/systemClear.cpp.o:
+	$(MAKE) -f CMakeFiles/systemClear.dir/build.make CMakeFiles/systemClear.dir/src/systemClear.cpp.o
+.PHONY : src/systemClear.cpp.o
+
+src/systemClear.i: src/systemClear.cpp.i
+
+.PHONY : src/systemClear.i
+
+# target to preprocess a source file
+src/systemClear.cpp.i:
+	$(MAKE) -f CMakeFiles/systemClear.dir/build.make CMakeFiles/systemClear.dir/src/systemClear.cpp.i
+.PHONY : src/systemClear.cpp.i
+
+src/systemClear.s: src/systemClear.cpp.s
+
+.PHONY : src/systemClear.s
+
+# target to generate assembly for a file
+src/systemClear.cpp.s:
+	$(MAKE) -f CMakeFiles/systemClear.dir/build.make CMakeFiles/systemClear.dir/src/systemClear.cpp.s
+.PHONY : src/systemClear.cpp.s
 
 # Help Target
 help:
@@ -452,30 +452,30 @@ help:
 	@echo "... Ai"
 	@echo "... edit_cache"
 	@echo "... Battleship"
-	@echo "... Scripts/Ai.o"
-	@echo "... Scripts/Ai.i"
-	@echo "... Scripts/Ai.s"
-	@echo "... Scripts/BotMap.o"
-	@echo "... Scripts/BotMap.i"
-	@echo "... Scripts/BotMap.s"
-	@echo "... Scripts/GameManager.o"
-	@echo "... Scripts/GameManager.i"
-	@echo "... Scripts/GameManager.s"
-	@echo "... Scripts/Map.o"
-	@echo "... Scripts/Map.i"
-	@echo "... Scripts/Map.s"
-	@echo "... Scripts/PlayerMap.o"
-	@echo "... Scripts/PlayerMap.i"
-	@echo "... Scripts/PlayerMap.s"
-	@echo "... Scripts/Ship.o"
-	@echo "... Scripts/Ship.i"
-	@echo "... Scripts/Ship.s"
-	@echo "... Scripts/main.o"
-	@echo "... Scripts/main.i"
-	@echo "... Scripts/main.s"
-	@echo "... Scripts/systemClear.o"
-	@echo "... Scripts/systemClear.i"
-	@echo "... Scripts/systemClear.s"
+	@echo "... src/Ai.o"
+	@echo "... src/Ai.i"
+	@echo "... src/Ai.s"
+	@echo "... src/BotMap.o"
+	@echo "... src/BotMap.i"
+	@echo "... src/BotMap.s"
+	@echo "... src/GameManager.o"
+	@echo "... src/GameManager.i"
+	@echo "... src/GameManager.s"
+	@echo "... src/Map.o"
+	@echo "... src/Map.i"
+	@echo "... src/Map.s"
+	@echo "... src/PlayerMap.o"
+	@echo "... src/PlayerMap.i"
+	@echo "... src/PlayerMap.s"
+	@echo "... src/Ship.o"
+	@echo "... src/Ship.i"
+	@echo "... src/Ship.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/systemClear.o"
+	@echo "... src/systemClear.i"
+	@echo "... src/systemClear.s"
 .PHONY : help
 
 

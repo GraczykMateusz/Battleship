@@ -57,57 +57,57 @@ include CMakeFiles/Battleship.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Battleship.dir/flags.make
 
-CMakeFiles/Battleship.dir/Scripts/main.cpp.o: CMakeFiles/Battleship.dir/flags.make
-CMakeFiles/Battleship.dir/Scripts/main.cpp.o: ../Scripts/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Battleship.dir/Scripts/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Battleship.dir/Scripts/main.cpp.o -c /home/wm/Programs/Battleship/Scripts/main.cpp
+CMakeFiles/Battleship.dir/src/main.cpp.o: CMakeFiles/Battleship.dir/flags.make
+CMakeFiles/Battleship.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Battleship.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Battleship.dir/src/main.cpp.o -c /home/wm/Programs/Battleship/src/main.cpp
 
-CMakeFiles/Battleship.dir/Scripts/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Battleship.dir/Scripts/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/Scripts/main.cpp > CMakeFiles/Battleship.dir/Scripts/main.cpp.i
+CMakeFiles/Battleship.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Battleship.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/src/main.cpp > CMakeFiles/Battleship.dir/src/main.cpp.i
 
-CMakeFiles/Battleship.dir/Scripts/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Battleship.dir/Scripts/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/Scripts/main.cpp -o CMakeFiles/Battleship.dir/Scripts/main.cpp.s
+CMakeFiles/Battleship.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Battleship.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/src/main.cpp -o CMakeFiles/Battleship.dir/src/main.cpp.s
 
-CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.o: CMakeFiles/Battleship.dir/flags.make
-CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.o: ../Scripts/BotMap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.o -c /home/wm/Programs/Battleship/Scripts/BotMap.cpp
+CMakeFiles/Battleship.dir/src/BotMap.cpp.o: CMakeFiles/Battleship.dir/flags.make
+CMakeFiles/Battleship.dir/src/BotMap.cpp.o: ../src/BotMap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Battleship.dir/src/BotMap.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Battleship.dir/src/BotMap.cpp.o -c /home/wm/Programs/Battleship/src/BotMap.cpp
 
-CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/Scripts/BotMap.cpp > CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.i
+CMakeFiles/Battleship.dir/src/BotMap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Battleship.dir/src/BotMap.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/src/BotMap.cpp > CMakeFiles/Battleship.dir/src/BotMap.cpp.i
 
-CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/Scripts/BotMap.cpp -o CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.s
+CMakeFiles/Battleship.dir/src/BotMap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Battleship.dir/src/BotMap.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/src/BotMap.cpp -o CMakeFiles/Battleship.dir/src/BotMap.cpp.s
 
-CMakeFiles/Battleship.dir/Scripts/Ai.cpp.o: CMakeFiles/Battleship.dir/flags.make
-CMakeFiles/Battleship.dir/Scripts/Ai.cpp.o: ../Scripts/Ai.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Battleship.dir/Scripts/Ai.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Battleship.dir/Scripts/Ai.cpp.o -c /home/wm/Programs/Battleship/Scripts/Ai.cpp
+CMakeFiles/Battleship.dir/src/Ai.cpp.o: CMakeFiles/Battleship.dir/flags.make
+CMakeFiles/Battleship.dir/src/Ai.cpp.o: ../src/Ai.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Battleship.dir/src/Ai.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Battleship.dir/src/Ai.cpp.o -c /home/wm/Programs/Battleship/src/Ai.cpp
 
-CMakeFiles/Battleship.dir/Scripts/Ai.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Battleship.dir/Scripts/Ai.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/Scripts/Ai.cpp > CMakeFiles/Battleship.dir/Scripts/Ai.cpp.i
+CMakeFiles/Battleship.dir/src/Ai.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Battleship.dir/src/Ai.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/src/Ai.cpp > CMakeFiles/Battleship.dir/src/Ai.cpp.i
 
-CMakeFiles/Battleship.dir/Scripts/Ai.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Battleship.dir/Scripts/Ai.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/Scripts/Ai.cpp -o CMakeFiles/Battleship.dir/Scripts/Ai.cpp.s
+CMakeFiles/Battleship.dir/src/Ai.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Battleship.dir/src/Ai.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/src/Ai.cpp -o CMakeFiles/Battleship.dir/src/Ai.cpp.s
 
 # Object files for target Battleship
 Battleship_OBJECTS = \
-"CMakeFiles/Battleship.dir/Scripts/main.cpp.o" \
-"CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.o" \
-"CMakeFiles/Battleship.dir/Scripts/Ai.cpp.o"
+"CMakeFiles/Battleship.dir/src/main.cpp.o" \
+"CMakeFiles/Battleship.dir/src/BotMap.cpp.o" \
+"CMakeFiles/Battleship.dir/src/Ai.cpp.o"
 
 # External object files for target Battleship
 Battleship_EXTERNAL_OBJECTS =
 
-Battleship: CMakeFiles/Battleship.dir/Scripts/main.cpp.o
-Battleship: CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.o
-Battleship: CMakeFiles/Battleship.dir/Scripts/Ai.cpp.o
+Battleship: CMakeFiles/Battleship.dir/src/main.cpp.o
+Battleship: CMakeFiles/Battleship.dir/src/BotMap.cpp.o
+Battleship: CMakeFiles/Battleship.dir/src/Ai.cpp.o
 Battleship: CMakeFiles/Battleship.dir/build.make
 Battleship: libAi.a
 Battleship: libMap.a

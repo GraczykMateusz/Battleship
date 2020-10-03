@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.o"
+  "CMakeFiles/GameManager.dir/src/GameManager.cpp.o"
   "libGameManager.a"
   "libGameManager.pdb"
 )

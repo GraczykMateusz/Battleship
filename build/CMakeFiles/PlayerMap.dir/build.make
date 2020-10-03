@@ -57,27 +57,27 @@ include CMakeFiles/PlayerMap.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/PlayerMap.dir/flags.make
 
-CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.o: CMakeFiles/PlayerMap.dir/flags.make
-CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.o: ../Scripts/PlayerMap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.o -c /home/wm/Programs/Battleship/Scripts/PlayerMap.cpp
+CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.o: CMakeFiles/PlayerMap.dir/flags.make
+CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.o: ../src/PlayerMap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.o -c /home/wm/Programs/Battleship/src/PlayerMap.cpp
 
-CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/Scripts/PlayerMap.cpp > CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.i
+CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/src/PlayerMap.cpp > CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.i
 
-CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/Scripts/PlayerMap.cpp -o CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.s
+CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/src/PlayerMap.cpp -o CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.s
 
 # Object files for target PlayerMap
 PlayerMap_OBJECTS = \
-"CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.o"
+"CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.o"
 
 # External object files for target PlayerMap
 PlayerMap_EXTERNAL_OBJECTS =
 
-libPlayerMap.a: CMakeFiles/PlayerMap.dir/Scripts/PlayerMap.cpp.o
+libPlayerMap.a: CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.o
 libPlayerMap.a: CMakeFiles/PlayerMap.dir/build.make
 libPlayerMap.a: CMakeFiles/PlayerMap.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libPlayerMap.a"

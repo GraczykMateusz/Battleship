@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/wm/Programs/Battleship/Scripts/Map.cpp
+/home/wm/Programs/Battleship/src/Map.cpp
 iostream
 -
 vector
 -
 Map.h
-/home/wm/Programs/Battleship/Scripts/Map.h
+/home/wm/Programs/Battleship/src/Map.h
 
-/home/wm/Programs/Battleship/Scripts/Map.h
+/home/wm/Programs/Battleship/src/Map.h
 vector
 -
 

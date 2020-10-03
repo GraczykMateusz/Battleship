@@ -57,27 +57,27 @@ include CMakeFiles/BotMap.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/BotMap.dir/flags.make
 
-CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.o: CMakeFiles/BotMap.dir/flags.make
-CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.o: ../Scripts/BotMap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.o -c /home/wm/Programs/Battleship/Scripts/BotMap.cpp
+CMakeFiles/BotMap.dir/src/BotMap.cpp.o: CMakeFiles/BotMap.dir/flags.make
+CMakeFiles/BotMap.dir/src/BotMap.cpp.o: ../src/BotMap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BotMap.dir/src/BotMap.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BotMap.dir/src/BotMap.cpp.o -c /home/wm/Programs/Battleship/src/BotMap.cpp
 
-CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/Scripts/BotMap.cpp > CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.i
+CMakeFiles/BotMap.dir/src/BotMap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BotMap.dir/src/BotMap.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/src/BotMap.cpp > CMakeFiles/BotMap.dir/src/BotMap.cpp.i
 
-CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/Scripts/BotMap.cpp -o CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.s
+CMakeFiles/BotMap.dir/src/BotMap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BotMap.dir/src/BotMap.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/src/BotMap.cpp -o CMakeFiles/BotMap.dir/src/BotMap.cpp.s
 
 # Object files for target BotMap
 BotMap_OBJECTS = \
-"CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.o"
+"CMakeFiles/BotMap.dir/src/BotMap.cpp.o"
 
 # External object files for target BotMap
 BotMap_EXTERNAL_OBJECTS =
 
-libBotMap.a: CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.o
+libBotMap.a: CMakeFiles/BotMap.dir/src/BotMap.cpp.o
 libBotMap.a: CMakeFiles/BotMap.dir/build.make
 libBotMap.a: CMakeFiles/BotMap.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libBotMap.a"

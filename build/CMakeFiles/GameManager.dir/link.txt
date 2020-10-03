@@ -1,2 +1,2 @@
-/usr/bin/ar qc libGameManager.a  CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.o
+/usr/bin/ar qc libGameManager.a  CMakeFiles/GameManager.dir/src/GameManager.cpp.o
 /usr/bin/ranlib libGameManager.a

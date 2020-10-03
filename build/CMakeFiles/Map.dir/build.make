@@ -57,27 +57,27 @@ include CMakeFiles/Map.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Map.dir/flags.make
 
-CMakeFiles/Map.dir/Scripts/Map.cpp.o: CMakeFiles/Map.dir/flags.make
-CMakeFiles/Map.dir/Scripts/Map.cpp.o: ../Scripts/Map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Map.dir/Scripts/Map.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Map.dir/Scripts/Map.cpp.o -c /home/wm/Programs/Battleship/Scripts/Map.cpp
+CMakeFiles/Map.dir/src/Map.cpp.o: CMakeFiles/Map.dir/flags.make
+CMakeFiles/Map.dir/src/Map.cpp.o: ../src/Map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Map.dir/src/Map.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Map.dir/src/Map.cpp.o -c /home/wm/Programs/Battleship/src/Map.cpp
 
-CMakeFiles/Map.dir/Scripts/Map.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Map.dir/Scripts/Map.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/Scripts/Map.cpp > CMakeFiles/Map.dir/Scripts/Map.cpp.i
+CMakeFiles/Map.dir/src/Map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Map.dir/src/Map.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/src/Map.cpp > CMakeFiles/Map.dir/src/Map.cpp.i
 
-CMakeFiles/Map.dir/Scripts/Map.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Map.dir/Scripts/Map.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/Scripts/Map.cpp -o CMakeFiles/Map.dir/Scripts/Map.cpp.s
+CMakeFiles/Map.dir/src/Map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Map.dir/src/Map.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/src/Map.cpp -o CMakeFiles/Map.dir/src/Map.cpp.s
 
 # Object files for target Map
 Map_OBJECTS = \
-"CMakeFiles/Map.dir/Scripts/Map.cpp.o"
+"CMakeFiles/Map.dir/src/Map.cpp.o"
 
 # External object files for target Map
 Map_EXTERNAL_OBJECTS =
 
-libMap.a: CMakeFiles/Map.dir/Scripts/Map.cpp.o
+libMap.a: CMakeFiles/Map.dir/src/Map.cpp.o
 libMap.a: CMakeFiles/Map.dir/build.make
 libMap.a: CMakeFiles/Map.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libMap.a"

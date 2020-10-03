@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/wm/Programs/Battleship/Scripts/Ai.h
+/home/wm/Programs/Battleship/src/Ai.h
 string
 -
 vector
 -
 
-/home/wm/Programs/Battleship/Scripts/BotMap.h
+/home/wm/Programs/Battleship/src/BotMap.h
 Map.h
-/home/wm/Programs/Battleship/Scripts/Map.h
+/home/wm/Programs/Battleship/src/Map.h
 vector
 -
 
-/home/wm/Programs/Battleship/Scripts/GameManager.cpp
+/home/wm/Programs/Battleship/src/GameManager.cpp
 iostream
 -
 memory
@@ -28,37 +28,37 @@ string
 random
 -
 GameManager.h
-/home/wm/Programs/Battleship/Scripts/GameManager.h
+/home/wm/Programs/Battleship/src/GameManager.h
 Map.h
-/home/wm/Programs/Battleship/Scripts/Map.h
+/home/wm/Programs/Battleship/src/Map.h
 Ai.h
-/home/wm/Programs/Battleship/Scripts/Ai.h
+/home/wm/Programs/Battleship/src/Ai.h
 systemClear.h
-/home/wm/Programs/Battleship/Scripts/systemClear.h
+/home/wm/Programs/Battleship/src/systemClear.h
 BotMap.h
-/home/wm/Programs/Battleship/Scripts/BotMap.h
+/home/wm/Programs/Battleship/src/BotMap.h
 PlayerMap.h
-/home/wm/Programs/Battleship/Scripts/PlayerMap.h
+/home/wm/Programs/Battleship/src/PlayerMap.h
 Ship.h
-/home/wm/Programs/Battleship/Scripts/Ship.h
+/home/wm/Programs/Battleship/src/Ship.h
 
-/home/wm/Programs/Battleship/Scripts/GameManager.h
+/home/wm/Programs/Battleship/src/GameManager.h
 string
 -
 
-/home/wm/Programs/Battleship/Scripts/Map.h
+/home/wm/Programs/Battleship/src/Map.h
 vector
 -
 
-/home/wm/Programs/Battleship/Scripts/PlayerMap.h
+/home/wm/Programs/Battleship/src/PlayerMap.h
 vector
 -
 Map.h
-/home/wm/Programs/Battleship/Scripts/Map.h
+/home/wm/Programs/Battleship/src/Map.h
 
-/home/wm/Programs/Battleship/Scripts/Ship.h
+/home/wm/Programs/Battleship/src/Ship.h
 vector
 -
 
-/home/wm/Programs/Battleship/Scripts/systemClear.h
+/home/wm/Programs/Battleship/src/systemClear.h
 

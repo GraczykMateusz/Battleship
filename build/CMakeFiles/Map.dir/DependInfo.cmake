@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/wm/Programs/Battleship/Scripts/Map.cpp" "/home/wm/Programs/Battleship/build/CMakeFiles/Map.dir/Scripts/Map.cpp.o"
+  "/home/wm/Programs/Battleship/src/Map.cpp" "/home/wm/Programs/Battleship/build/CMakeFiles/Map.dir/src/Map.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

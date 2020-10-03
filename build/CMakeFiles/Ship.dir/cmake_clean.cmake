@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ship.dir/Scripts/Ship.cpp.o"
+  "CMakeFiles/Ship.dir/src/Ship.cpp.o"
   "libShip.a"
   "libShip.pdb"
 )

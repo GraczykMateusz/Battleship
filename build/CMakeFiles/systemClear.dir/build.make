@@ -57,27 +57,27 @@ include CMakeFiles/systemClear.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/systemClear.dir/flags.make
 
-CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.o: CMakeFiles/systemClear.dir/flags.make
-CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.o: ../Scripts/systemClear.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.o -c /home/wm/Programs/Battleship/Scripts/systemClear.cpp
+CMakeFiles/systemClear.dir/src/systemClear.cpp.o: CMakeFiles/systemClear.dir/flags.make
+CMakeFiles/systemClear.dir/src/systemClear.cpp.o: ../src/systemClear.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/systemClear.dir/src/systemClear.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/systemClear.dir/src/systemClear.cpp.o -c /home/wm/Programs/Battleship/src/systemClear.cpp
 
-CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/Scripts/systemClear.cpp > CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.i
+CMakeFiles/systemClear.dir/src/systemClear.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/systemClear.dir/src/systemClear.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/src/systemClear.cpp > CMakeFiles/systemClear.dir/src/systemClear.cpp.i
 
-CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/Scripts/systemClear.cpp -o CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.s
+CMakeFiles/systemClear.dir/src/systemClear.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/systemClear.dir/src/systemClear.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/src/systemClear.cpp -o CMakeFiles/systemClear.dir/src/systemClear.cpp.s
 
 # Object files for target systemClear
 systemClear_OBJECTS = \
-"CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.o"
+"CMakeFiles/systemClear.dir/src/systemClear.cpp.o"
 
 # External object files for target systemClear
 systemClear_EXTERNAL_OBJECTS =
 
-libsystemClear.a: CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.o
+libsystemClear.a: CMakeFiles/systemClear.dir/src/systemClear.cpp.o
 libsystemClear.a: CMakeFiles/systemClear.dir/build.make
 libsystemClear.a: CMakeFiles/systemClear.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libsystemClear.a"

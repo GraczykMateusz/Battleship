@@ -57,27 +57,27 @@ include CMakeFiles/Ship.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Ship.dir/flags.make
 
-CMakeFiles/Ship.dir/Scripts/Ship.cpp.o: CMakeFiles/Ship.dir/flags.make
-CMakeFiles/Ship.dir/Scripts/Ship.cpp.o: ../Scripts/Ship.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ship.dir/Scripts/Ship.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ship.dir/Scripts/Ship.cpp.o -c /home/wm/Programs/Battleship/Scripts/Ship.cpp
+CMakeFiles/Ship.dir/src/Ship.cpp.o: CMakeFiles/Ship.dir/flags.make
+CMakeFiles/Ship.dir/src/Ship.cpp.o: ../src/Ship.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ship.dir/src/Ship.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ship.dir/src/Ship.cpp.o -c /home/wm/Programs/Battleship/src/Ship.cpp
 
-CMakeFiles/Ship.dir/Scripts/Ship.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ship.dir/Scripts/Ship.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/Scripts/Ship.cpp > CMakeFiles/Ship.dir/Scripts/Ship.cpp.i
+CMakeFiles/Ship.dir/src/Ship.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ship.dir/src/Ship.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/src/Ship.cpp > CMakeFiles/Ship.dir/src/Ship.cpp.i
 
-CMakeFiles/Ship.dir/Scripts/Ship.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ship.dir/Scripts/Ship.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/Scripts/Ship.cpp -o CMakeFiles/Ship.dir/Scripts/Ship.cpp.s
+CMakeFiles/Ship.dir/src/Ship.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ship.dir/src/Ship.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/src/Ship.cpp -o CMakeFiles/Ship.dir/src/Ship.cpp.s
 
 # Object files for target Ship
 Ship_OBJECTS = \
-"CMakeFiles/Ship.dir/Scripts/Ship.cpp.o"
+"CMakeFiles/Ship.dir/src/Ship.cpp.o"
 
 # External object files for target Ship
 Ship_EXTERNAL_OBJECTS =
 
-libShip.a: CMakeFiles/Ship.dir/Scripts/Ship.cpp.o
+libShip.a: CMakeFiles/Ship.dir/src/Ship.cpp.o
 libShip.a: CMakeFiles/Ship.dir/build.make
 libShip.a: CMakeFiles/Ship.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libShip.a"

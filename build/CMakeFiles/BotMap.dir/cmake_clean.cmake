@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.o"
+  "CMakeFiles/BotMap.dir/src/BotMap.cpp.o"
   "libBotMap.a"
   "libBotMap.pdb"
 )

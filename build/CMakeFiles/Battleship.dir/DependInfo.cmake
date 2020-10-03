@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/wm/Programs/Battleship/Scripts/Ai.cpp" "/home/wm/Programs/Battleship/build/CMakeFiles/Battleship.dir/Scripts/Ai.cpp.o"
-  "/home/wm/Programs/Battleship/Scripts/BotMap.cpp" "/home/wm/Programs/Battleship/build/CMakeFiles/Battleship.dir/Scripts/BotMap.cpp.o"
-  "/home/wm/Programs/Battleship/Scripts/main.cpp" "/home/wm/Programs/Battleship/build/CMakeFiles/Battleship.dir/Scripts/main.cpp.o"
+  "/home/wm/Programs/Battleship/src/Ai.cpp" "/home/wm/Programs/Battleship/build/CMakeFiles/Battleship.dir/src/Ai.cpp.o"
+  "/home/wm/Programs/Battleship/src/BotMap.cpp" "/home/wm/Programs/Battleship/build/CMakeFiles/Battleship.dir/src/BotMap.cpp.o"
+  "/home/wm/Programs/Battleship/src/main.cpp" "/home/wm/Programs/Battleship/build/CMakeFiles/Battleship.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

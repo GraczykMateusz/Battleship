@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.10)
 
 project(Battleship)
 
-set(ScriptPath Scripts/)
+set(ScriptPath src/)
 
-add_executable(Battleship Scripts/main.cpp Scripts/BotMap.cpp Scripts/Ai.cpp)
+add_executable(Battleship ${ScriptPath}main.cpp ${ScriptPath}BotMap.cpp ${ScriptPath}Ai.cpp)
 
 add_library(Ai ${ScriptPath}Ai.h ${ScriptPath}Ai.cpp)
 add_library(Map ${ScriptPath}Map.h ${ScriptPath}Map.cpp)

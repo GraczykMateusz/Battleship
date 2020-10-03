@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/systemClear.dir/Scripts/systemClear.cpp.o"
+  "CMakeFiles/systemClear.dir/src/systemClear.cpp.o"
   "libsystemClear.a"
   "libsystemClear.pdb"
 )

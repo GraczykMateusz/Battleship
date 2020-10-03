@@ -37,7 +37,7 @@ char GameManager::playerSelect() {
 /*----------MENU-END-------------*/
 
 /*------------START--------------*/
-bool GameManager::startGame() {
+void GameManager::startGame() {
 	std::unique_ptr<BotMap> botMap = std::make_unique<BotMap>();
 	std::unique_ptr<PlayerMap> playerMap = std::make_unique<PlayerMap>();
 	std::shared_ptr<Ship> ship = std::make_shared<Ship>();

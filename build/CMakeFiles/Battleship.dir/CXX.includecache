@@ -6,19 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/wm/Programs/Battleship/Scripts/BotMap.cpp
-BotMap.h
-/home/wm/Programs/Battleship/Scripts/BotMap.h
+/home/wm/Programs/Battleship/src/Ai.h
+string
+-
+vector
+-
+
+/home/wm/Programs/Battleship/src/GameManager.h
+string
+-
+
+/home/wm/Programs/Battleship/src/Map.h
+vector
+-
+
+/home/wm/Programs/Battleship/src/main.cpp
 iostream
 -
-
-/home/wm/Programs/Battleship/Scripts/BotMap.h
+memory
+-
 Map.h
-/home/wm/Programs/Battleship/Scripts/Map.h
-vector
--
+/home/wm/Programs/Battleship/src/Map.h
+GameManager.h
+/home/wm/Programs/Battleship/src/GameManager.h
+systemClear.h
+/home/wm/Programs/Battleship/src/systemClear.h
+Ai.h
+/home/wm/Programs/Battleship/src/Ai.h
 
-/home/wm/Programs/Battleship/Scripts/Map.h
-vector
--
+/home/wm/Programs/Battleship/src/systemClear.h
 

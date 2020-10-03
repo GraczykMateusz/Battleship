@@ -15,7 +15,7 @@ public:
 	//Others
 	char menu();
 	void settings();
-	bool startGame();
+	void startGame();
 
 	//Exit
 	void setExit() { exit = true; }	

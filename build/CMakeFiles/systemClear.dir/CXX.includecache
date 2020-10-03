@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/wm/Programs/Battleship/Scripts/systemClear.cpp
+/home/wm/Programs/Battleship/src/systemClear.cpp
 cstdlib
 -
 systemClear.h
-/home/wm/Programs/Battleship/Scripts/systemClear.h
+/home/wm/Programs/Battleship/src/systemClear.h
 
-/home/wm/Programs/Battleship/Scripts/systemClear.h
+/home/wm/Programs/Battleship/src/systemClear.h
 

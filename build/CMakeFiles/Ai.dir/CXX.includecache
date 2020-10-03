@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/wm/Programs/Battleship/Scripts/Ai.cpp
+/home/wm/Programs/Battleship/src/Ai.cpp
 Ai.h
-/home/wm/Programs/Battleship/Scripts/Ai.h
+/home/wm/Programs/Battleship/src/Ai.h
 random
 -
 algorithm
 -
 
-/home/wm/Programs/Battleship/Scripts/Ai.h
+/home/wm/Programs/Battleship/src/Ai.h
 string
 -
 vector

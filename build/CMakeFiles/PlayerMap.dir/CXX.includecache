@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/wm/Programs/Battleship/Scripts/Map.h
+/home/wm/Programs/Battleship/src/Map.h
 vector
 -
 
-/home/wm/Programs/Battleship/Scripts/PlayerMap.cpp
+/home/wm/Programs/Battleship/src/PlayerMap.cpp
 PlayerMap.h
-/home/wm/Programs/Battleship/Scripts/PlayerMap.h
+/home/wm/Programs/Battleship/src/PlayerMap.h
 algorithm
 -
 iostream
 -
 
-/home/wm/Programs/Battleship/Scripts/PlayerMap.h
+/home/wm/Programs/Battleship/src/PlayerMap.h
 vector
 -
 Map.h
-/home/wm/Programs/Battleship/Scripts/Map.h
+/home/wm/Programs/Battleship/src/Map.h
 

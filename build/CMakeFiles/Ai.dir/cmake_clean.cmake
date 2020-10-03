@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ai.dir/Scripts/Ai.cpp.o"
+  "CMakeFiles/Ai.dir/src/Ai.cpp.o"
   "libAi.a"
   "libAi.pdb"
 )

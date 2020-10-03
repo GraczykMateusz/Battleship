@@ -57,27 +57,27 @@ include CMakeFiles/GameManager.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/GameManager.dir/flags.make
 
-CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.o: CMakeFiles/GameManager.dir/flags.make
-CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.o: ../Scripts/GameManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.o -c /home/wm/Programs/Battleship/Scripts/GameManager.cpp
+CMakeFiles/GameManager.dir/src/GameManager.cpp.o: CMakeFiles/GameManager.dir/flags.make
+CMakeFiles/GameManager.dir/src/GameManager.cpp.o: ../src/GameManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameManager.dir/src/GameManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameManager.dir/src/GameManager.cpp.o -c /home/wm/Programs/Battleship/src/GameManager.cpp
 
-CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/Scripts/GameManager.cpp > CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.i
+CMakeFiles/GameManager.dir/src/GameManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameManager.dir/src/GameManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/src/GameManager.cpp > CMakeFiles/GameManager.dir/src/GameManager.cpp.i
 
-CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/Scripts/GameManager.cpp -o CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.s
+CMakeFiles/GameManager.dir/src/GameManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameManager.dir/src/GameManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/src/GameManager.cpp -o CMakeFiles/GameManager.dir/src/GameManager.cpp.s
 
 # Object files for target GameManager
 GameManager_OBJECTS = \
-"CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.o"
+"CMakeFiles/GameManager.dir/src/GameManager.cpp.o"
 
 # External object files for target GameManager
 GameManager_EXTERNAL_OBJECTS =
 
-libGameManager.a: CMakeFiles/GameManager.dir/Scripts/GameManager.cpp.o
+libGameManager.a: CMakeFiles/GameManager.dir/src/GameManager.cpp.o
 libGameManager.a: CMakeFiles/GameManager.dir/build.make
 libGameManager.a: CMakeFiles/GameManager.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libGameManager.a"

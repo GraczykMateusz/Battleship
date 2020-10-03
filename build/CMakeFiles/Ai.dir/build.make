@@ -57,27 +57,27 @@ include CMakeFiles/Ai.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Ai.dir/flags.make
 
-CMakeFiles/Ai.dir/Scripts/Ai.cpp.o: CMakeFiles/Ai.dir/flags.make
-CMakeFiles/Ai.dir/Scripts/Ai.cpp.o: ../Scripts/Ai.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ai.dir/Scripts/Ai.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ai.dir/Scripts/Ai.cpp.o -c /home/wm/Programs/Battleship/Scripts/Ai.cpp
+CMakeFiles/Ai.dir/src/Ai.cpp.o: CMakeFiles/Ai.dir/flags.make
+CMakeFiles/Ai.dir/src/Ai.cpp.o: ../src/Ai.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ai.dir/src/Ai.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ai.dir/src/Ai.cpp.o -c /home/wm/Programs/Battleship/src/Ai.cpp
 
-CMakeFiles/Ai.dir/Scripts/Ai.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ai.dir/Scripts/Ai.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/Scripts/Ai.cpp > CMakeFiles/Ai.dir/Scripts/Ai.cpp.i
+CMakeFiles/Ai.dir/src/Ai.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ai.dir/src/Ai.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wm/Programs/Battleship/src/Ai.cpp > CMakeFiles/Ai.dir/src/Ai.cpp.i
 
-CMakeFiles/Ai.dir/Scripts/Ai.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ai.dir/Scripts/Ai.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/Scripts/Ai.cpp -o CMakeFiles/Ai.dir/Scripts/Ai.cpp.s
+CMakeFiles/Ai.dir/src/Ai.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ai.dir/src/Ai.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wm/Programs/Battleship/src/Ai.cpp -o CMakeFiles/Ai.dir/src/Ai.cpp.s
 
 # Object files for target Ai
 Ai_OBJECTS = \
-"CMakeFiles/Ai.dir/Scripts/Ai.cpp.o"
+"CMakeFiles/Ai.dir/src/Ai.cpp.o"
 
 # External object files for target Ai
 Ai_EXTERNAL_OBJECTS =
 
-libAi.a: CMakeFiles/Ai.dir/Scripts/Ai.cpp.o
+libAi.a: CMakeFiles/Ai.dir/src/Ai.cpp.o
 libAi.a: CMakeFiles/Ai.dir/build.make
 libAi.a: CMakeFiles/Ai.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wm/Programs/Battleship/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libAi.a"
