@@ -3,12 +3,12 @@ Hello everyone! This is my first bigger project in C++. I have used C++11 standa
 
 *MENU:
 
-![](Pictures/menu.png)
+![](docs/menu.png)
 
 *SETTINGS
 
-![](Pictures/settings.png)
+![](docs/settings.png)
 
 *GAMEPLAY
 
-![](Pictures/gameplay.png)
+![](docs/gameplay.png)
