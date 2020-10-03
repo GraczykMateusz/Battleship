@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wm/Programs/Battleship/Scripts/systemClear.cpp
+cstdlib
+-
+systemClear.h
+/home/wm/Programs/Battleship/Scripts/systemClear.h
+
+/home/wm/Programs/Battleship/Scripts/systemClear.h
+

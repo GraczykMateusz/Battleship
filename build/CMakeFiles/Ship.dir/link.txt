@@ -1,0 +1,2 @@
+/usr/bin/ar qc libShip.a  CMakeFiles/Ship.dir/Scripts/Ship.cpp.o
+/usr/bin/ranlib libShip.a

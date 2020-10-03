@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wm/Programs/Battleship/Scripts/Ai.cpp
+Ai.h
+/home/wm/Programs/Battleship/Scripts/Ai.h
+random
+-
+algorithm
+-
+
+/home/wm/Programs/Battleship/Scripts/Ai.h
+string
+-
+vector
+-
+

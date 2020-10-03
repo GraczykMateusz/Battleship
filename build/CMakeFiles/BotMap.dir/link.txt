@@ -1,0 +1,2 @@
+/usr/bin/ar qc libBotMap.a  CMakeFiles/BotMap.dir/Scripts/BotMap.cpp.o
+/usr/bin/ranlib libBotMap.a

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wm/Programs/Battleship/Scripts/Ship.cpp
+Ship.h
+/home/wm/Programs/Battleship/Scripts/Ship.h
+iostream
+-
+
+/home/wm/Programs/Battleship/Scripts/Ship.h
+vector
+-
+
