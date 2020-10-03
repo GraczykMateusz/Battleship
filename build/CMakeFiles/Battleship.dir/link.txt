@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/Battleship.dir/src/main.cpp.o CMakeFiles/Battleship.dir/src/BotMap.cpp.o CMakeFiles/Battleship.dir/src/Ai.cpp.o  -o Battleship  libAi.a libMap.a libBotMap.a libGameManager.a libPlayerMap.a libShip.a libsystemClear.a 

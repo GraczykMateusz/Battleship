@@ -1,2 +1,0 @@
-/usr/bin/ar qc libPlayerMap.a  CMakeFiles/PlayerMap.dir/src/PlayerMap.cpp.o
-/usr/bin/ranlib libPlayerMap.a

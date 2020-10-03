@@ -1,2 +1,0 @@
-/usr/bin/ar qc libAi.a  CMakeFiles/Ai.dir/src/Ai.cpp.o
-/usr/bin/ranlib libAi.a

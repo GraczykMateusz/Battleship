@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsystemClear.a  CMakeFiles/systemClear.dir/src/systemClear.cpp.o
-/usr/bin/ranlib libsystemClear.a
